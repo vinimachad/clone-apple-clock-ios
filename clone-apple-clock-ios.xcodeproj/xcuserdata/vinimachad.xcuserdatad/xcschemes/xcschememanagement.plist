@@ -6,8 +6,28 @@
 	<dict>
 		<key>clone-apple-clock-ios.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3C65E4E527B072FE00E79E8C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3C65E4FB27B072FF00E79E8C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3C65E50527B072FF00E79E8C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

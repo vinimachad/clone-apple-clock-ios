@@ -20,7 +20,7 @@ class ContainerCoordinator: CoordinatorProtocol {
     private var navigationController = UINavigationController()
     
     func start() -> UIViewController {
-        let vc = UIViewController()
+        let vc = ContainerFactory.container()
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.setViewControllers([vc], animated: true)
         return navigationController
