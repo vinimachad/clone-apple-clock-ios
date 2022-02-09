@@ -8,11 +8,16 @@
 import UIKit
 import SnapKit
 
-protocol TabBarViewModelProtocol {}
+protocol TabBarViewModelProtocol {
+    var tabs: [UITabBarItem] { get }
+    func didSelectTabItem(_ tag: Int)
+}
 
 class TabBarView: UIView {
     
     // MARK: - UI Components
+    
+    private var tabBar = UITabBar()
     
     // MARK: - Private properties
     
@@ -34,6 +39,7 @@ class TabBarView: UIView {
     
     func bindIn(viewModel: TabBarViewModelProtocol) {
         self.viewModel = viewModel
+        tabBar.setItems(viewModel.tabs, animated: true)
     }
 }
 
@@ -43,6 +49,12 @@ extension TabBarView {
     
     private func setup() {
         setupConstraints()
+        setupTabBar()
+        backgroundColor = .black
+    }
+    
+    private func setupTabBar() {
+        tabBar.delegate = self
     }
 }
 
@@ -50,11 +62,35 @@ extension TabBarView {
 
 extension TabBarView {
     
+    func setViewAboveTabBar(_ view: UIView) {
+        addSubview(view)
+        sendSubviewToBack(view)
+        
+        view.snp.makeConstraints {
+            $0.left.trailing.equalTo(0)
+            $0.bottom.equalTo(tabBar.snp.top)
+            $0.top.equalTo(snp.topMargin)
+        }
+    }
+    
     private func setupConstraints() {
         viewHierarchy()
+        
+        tabBar.snp.makeConstraints {
+            $0.bottom.equalTo(0)
+            $0.leading.trailing.equalTo(0)
+            $0.height.equalTo(100)
+        }
     }
     
     private func viewHierarchy() {
-        
+        addSubview(tabBar)
+    }
+}
+
+extension TabBarView: UITabBarDelegate {
+    
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        viewModel?.didSelectTabItem(item.tag)
     }
 }
