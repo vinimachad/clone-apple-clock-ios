@@ -58,6 +58,8 @@ extension TabBarView {
     private func setupTabBar() {
         tabBar.delegate = self
         tabBar.tintColor = .systemOrange
+        tabBar.barTintColor = .black
+        tabBar.isTranslucent = false
     }
 }
 
