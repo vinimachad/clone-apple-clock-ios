@@ -10,6 +10,7 @@ target 'clone-apple-clock-ios' do
 
   target 'clone-apple-clock-iosTests' do
     inherit! :search_paths
+    pod 'iOSSnapshotTestCase'
   end
 
   target 'clone-apple-clock-iosUITests' do

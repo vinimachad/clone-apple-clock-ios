@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		3C2B41C427B206DD0064F0E4 /* ContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B41C327B206DD0064F0E4 /* ContainerFactory.swift */; };
 		3C2B41C827B2104A0064F0E4 /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2B41C727B2104A0064F0E4 /* Empty.xib */; };
+		3C4AC05A27B5F1A700B371E4 /* TabBarViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AC05927B5F1A700B371E4 /* TabBarViewSnapshotTests.swift */; };
+		3C4AC05C27B5F2BB00B371E4 /* Snapshots in Resources */ = {isa = PBXBuildFile; fileRef = 3C4AC05B27B5F2BB00B371E4 /* Snapshots */; };
+		3C4AC05F27B5F38100B371E4 /* TabBarViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AC05E27B5F38100B371E4 /* TabBarViewModelMock.swift */; };
+		3C4AC06227B5F44C00B371E4 /* Spy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AC06127B5F44C00B371E4 /* Spy.swift */; };
+		3C4AC06427B5F5FB00B371E4 /* TabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AC06327B5F5FB00B371E4 /* TabBarControllerTests.swift */; };
+		3C4AC06627B5F64E00B371E4 /* TabBarControllerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AC06527B5F64E00B371E4 /* TabBarControllerDelegateMock.swift */; };
+		3C4AC06827B5F87000B371E4 /* TabBarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AC06727B5F87000B371E4 /* TabBarViewModelTests.swift */; };
 		3C65E4EA27B072FE00E79E8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E4E927B072FE00E79E8C /* AppDelegate.swift */; };
 		3C65E4EC27B072FE00E79E8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E4EB27B072FE00E79E8C /* SceneDelegate.swift */; };
 		3C65E4F327B072FF00E79E8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C65E4F227B072FF00E79E8C /* Assets.xcassets */; };
 		3C65E4F627B072FF00E79E8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C65E4F427B072FF00E79E8C /* LaunchScreen.storyboard */; };
-		3C65E50127B072FF00E79E8C /* clone_apple_clock_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E50027B072FF00E79E8C /* clone_apple_clock_iosTests.swift */; };
 		3C65E50B27B072FF00E79E8C /* clone_apple_clock_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E50A27B072FF00E79E8C /* clone_apple_clock_iosUITests.swift */; };
 		3C65E50D27B072FF00E79E8C /* clone_apple_clock_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E50C27B072FF00E79E8C /* clone_apple_clock_iosUITestsLaunchTests.swift */; };
 		3C65E51E27B0736D00E79E8C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E51D27B0736D00E79E8C /* AppCoordinator.swift */; };
@@ -53,6 +59,13 @@
 		2CCF9984F0CF37D5C27ED81D /* Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests/Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3C2B41C327B206DD0064F0E4 /* ContainerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerFactory.swift; sourceTree = "<group>"; };
 		3C2B41C727B2104A0064F0E4 /* Empty.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
+		3C4AC05927B5F1A700B371E4 /* TabBarViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewSnapshotTests.swift; sourceTree = "<group>"; };
+		3C4AC05B27B5F2BB00B371E4 /* Snapshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Snapshots; sourceTree = "<group>"; };
+		3C4AC05E27B5F38100B371E4 /* TabBarViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModelMock.swift; sourceTree = "<group>"; };
+		3C4AC06127B5F44C00B371E4 /* Spy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spy.swift; sourceTree = "<group>"; };
+		3C4AC06327B5F5FB00B371E4 /* TabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerTests.swift; sourceTree = "<group>"; };
+		3C4AC06527B5F64E00B371E4 /* TabBarControllerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerDelegateMock.swift; sourceTree = "<group>"; };
+		3C4AC06727B5F87000B371E4 /* TabBarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModelTests.swift; sourceTree = "<group>"; };
 		3C65E4E627B072FE00E79E8C /* clone-apple-clock-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clone-apple-clock-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C65E4E927B072FE00E79E8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C65E4EB27B072FE00E79E8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +73,6 @@
 		3C65E4F527B072FF00E79E8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C65E4F727B072FF00E79E8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C65E4FC27B072FF00E79E8C /* clone-apple-clock-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "clone-apple-clock-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C65E50027B072FF00E79E8C /* clone_apple_clock_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clone_apple_clock_iosTests.swift; sourceTree = "<group>"; };
 		3C65E50627B072FF00E79E8C /* clone-apple-clock-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "clone-apple-clock-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C65E50A27B072FF00E79E8C /* clone_apple_clock_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clone_apple_clock_iosUITests.swift; sourceTree = "<group>"; };
 		3C65E50C27B072FF00E79E8C /* clone_apple_clock_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clone_apple_clock_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -130,11 +142,62 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
+		3C4AC04F27B5F01200B371E4 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		3C4AC05027B5F01C00B371E4 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				3C4AC05227B5F03400B371E4 /* TabBar */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		3C4AC05127B5F02000B371E4 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		3C4AC05227B5F03400B371E4 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				3C4AC05D27B5F37B00B371E4 /* Mock */,
+				3C4AC05927B5F1A700B371E4 /* TabBarViewSnapshotTests.swift */,
+				3C4AC06327B5F5FB00B371E4 /* TabBarControllerTests.swift */,
+				3C4AC06727B5F87000B371E4 /* TabBarViewModelTests.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		3C4AC05D27B5F37B00B371E4 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				3C4AC05E27B5F38100B371E4 /* TabBarViewModelMock.swift */,
+				3C4AC06527B5F64E00B371E4 /* TabBarControllerDelegateMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		3C4AC06027B5F40600B371E4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3C4AC06127B5F44C00B371E4 /* Spy.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		3C65E4DD27B072FE00E79E8C = {
 			isa = PBXGroup;
 			children = (
 				3C65E4E827B072FE00E79E8C /* clone-apple-clock-ios */,
 				3C65E4FF27B072FF00E79E8C /* clone-apple-clock-iosTests */,
+				3C4AC05B27B5F2BB00B371E4 /* Snapshots */,
 				3C65E50927B072FF00E79E8C /* clone-apple-clock-iosUITests */,
 				3C65E4E727B072FE00E79E8C /* Products */,
 				7A2ED73FBFAD271718222F16 /* Pods */,
@@ -170,7 +233,10 @@
 		3C65E4FF27B072FF00E79E8C /* clone-apple-clock-iosTests */ = {
 			isa = PBXGroup;
 			children = (
-				3C65E50027B072FF00E79E8C /* clone_apple_clock_iosTests.swift */,
+				3C4AC06027B5F40600B371E4 /* Helper */,
+				3C4AC04F27B5F01200B371E4 /* Support */,
+				3C4AC05127B5F02000B371E4 /* Coordinators */,
+				3C4AC05027B5F01C00B371E4 /* Features */,
 			);
 			path = "clone-apple-clock-iosTests";
 			sourceTree = "<group>";
@@ -323,6 +389,7 @@
 				3C65E4F827B072FF00E79E8C /* Sources */,
 				3C65E4F927B072FF00E79E8C /* Frameworks */,
 				3C65E4FA27B072FF00E79E8C /* Resources */,
+				821610FEFFCB5529F010B846 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -369,6 +436,7 @@
 					};
 					3C65E4FB27B072FF00E79E8C = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = 3C65E4E527B072FE00E79E8C;
 					};
 					3C65E50527B072FF00E79E8C = {
@@ -413,6 +481,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C4AC05C27B5F2BB00B371E4 /* Snapshots in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +532,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-clone-apple-clock-ios/Pods-clone-apple-clock-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		821610FEFFCB5529F010B846 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-clone-apple-clock-iosTests/Pods-clone-apple-clock-iosTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-clone-apple-clock-iosTests/Pods-clone-apple-clock-iosTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-clone-apple-clock-iosTests/Pods-clone-apple-clock-iosTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9BF724DF827753685C15AD06 /* [CP] Check Pods Manifest.lock */ = {
@@ -552,7 +638,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C65E50127B072FF00E79E8C /* clone_apple_clock_iosTests.swift in Sources */,
+				3C4AC06827B5F87000B371E4 /* TabBarViewModelTests.swift in Sources */,
+				3C4AC06627B5F64E00B371E4 /* TabBarControllerDelegateMock.swift in Sources */,
+				3C4AC05F27B5F38100B371E4 /* TabBarViewModelMock.swift in Sources */,
+				3C4AC06427B5F5FB00B371E4 /* TabBarControllerTests.swift in Sources */,
+				3C4AC05A27B5F1A700B371E4 /* TabBarViewSnapshotTests.swift in Sources */,
+				3C4AC06227B5F44C00B371E4 /* Spy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,15 +869,23 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 77PUJX2KMA;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vinicius.clone-apple-clock-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/clone-apple-clock-ios.app/clone-apple-clock-ios";
@@ -799,15 +898,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 77PUJX2KMA;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vinicius.clone-apple-clock-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/clone-apple-clock-ios.app/clone-apple-clock-ios";
