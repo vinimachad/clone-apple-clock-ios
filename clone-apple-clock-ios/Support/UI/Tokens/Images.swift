@@ -11,10 +11,10 @@ import UIKit
 extension UIImage {
     
     enum Icons {
-        static var alarm: UIImage = UIImage(systemName: "alarm") ?? UIImage()
+        static var alarm: UIImage = UIImage(systemName: "alarm.fill") ?? UIImage()
         static var worldClock: UIImage = UIImage(systemName: "network") ?? UIImage()
         static var timer: UIImage = UIImage(systemName: "timer") ?? UIImage()
-        static var stopWatch: UIImage = UIImage(systemName: "stopwatch") ?? UIImage()
+        static var stopWatch: UIImage = UIImage(systemName: "stopwatch.fill") ?? UIImage()
     }
 }
 

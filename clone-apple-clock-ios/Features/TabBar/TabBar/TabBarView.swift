@@ -10,6 +10,7 @@ import SnapKit
 
 protocol TabBarViewModelProtocol {
     var tabs: [UITabBarItem] { get }
+    var firstSelectedItem: UITabBarItem { get }
     func didSelectTabItem(_ tag: Int)
 }
 
@@ -40,6 +41,7 @@ class TabBarView: UIView {
     func bindIn(viewModel: TabBarViewModelProtocol) {
         self.viewModel = viewModel
         tabBar.setItems(viewModel.tabs, animated: true)
+        tabBar.selectedItem = viewModel.firstSelectedItem
     }
 }
 
@@ -55,6 +57,7 @@ extension TabBarView {
     
     private func setupTabBar() {
         tabBar.delegate = self
+        tabBar.tintColor = .systemOrange
     }
 }
 
