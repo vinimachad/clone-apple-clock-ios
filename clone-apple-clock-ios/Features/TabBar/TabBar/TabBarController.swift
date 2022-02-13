@@ -8,29 +8,17 @@
 import Foundation
 import UIKit
 
-protocol TabBarControllerDelegate: AnyObject {
-    func getControllerByTab(_ tab: Tab) -> UIViewController
-}
-
 class TabBarController<ViewModel: TabBarProtocol>: UIViewController {
     
     // MARK: - Private properties
     
     private let contentView: TabBarView
     private var viewModel: ViewModel
-    private weak var delegate: TabBarControllerDelegate?
-    
-    private(set) var childViewController: UIViewController? {
-        didSet {
-            self.setNeedsStatusBarAppearanceUpdate()
-        }
-    }
     
     // MARK: - Init
     
-    init(viewModel: ViewModel, delegate: TabBarControllerDelegate?) {
+    init(viewModel: ViewModel) {
         self.viewModel = viewModel
-        self.delegate = delegate
         contentView = TabBarView()
         super.init(nibName: nil, bundle: nil)
     }
@@ -51,38 +39,13 @@ class TabBarController<ViewModel: TabBarProtocol>: UIViewController {
         super.viewDidLoad()
         bind()
     }
-    
-    // MARK: - Setup
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        .lightContent
-    }
 }
+
+// MARK: - Bind
 
 extension TabBarController {
     
-    // MARK: - Bind
-    
     private func bind() {
         contentView.bindIn(viewModel: viewModel)
-        
-        viewModel.onSelectedTabItem = { [weak self] tabItem in
-            if let vc = self?.delegate?.getControllerByTab(tabItem) {
-                self?.addViewController(vc)
-            }
-        }
-    }
-    
-    private func addViewController(_ viewController: UIViewController) {
-        if let oldViewController = childViewController {
-            oldViewController.willMove(toParent: nil)
-            oldViewController.view.removeFromSuperview()
-            oldViewController.removeFromParent()
-        }
-        
-        addChild(viewController)
-        contentView.setViewAboveTabBar(viewController.view)
-        viewController.didMove(toParent: self)
-        childViewController = viewController
     }
 }

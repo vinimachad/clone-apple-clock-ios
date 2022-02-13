@@ -20,33 +20,9 @@ class ContainerCoordinator: CoordinatorProtocol {
     private var navigationController = UINavigationController()
     
     func start() -> UIViewController {
-        let vc = ContainerFactory.container(delegate: self)
+        let vc = ContainerFactory.container()
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.setViewControllers([vc], animated: true)
         return navigationController
-    }
-}
-
-extension ContainerCoordinator: TabBarControllerDelegate {
-    
-    func getControllerByTab(_ tab: Tab) -> UIViewController {
-        switch tab {
-        case .worldClock:
-            let cv = UIViewController()
-            cv.view.backgroundColor = .green
-            return cv
-        case .alarm:
-            let cv = UIViewController()
-            cv.view.backgroundColor = .yellow
-            return cv
-        case .stopWatch:
-            let cv = UIViewController()
-            cv.view.backgroundColor = .blue
-            return cv
-        case .timer:
-            let cv = UIViewController()
-            cv.view.backgroundColor = .purple
-            return cv
-        }
     }
 }
