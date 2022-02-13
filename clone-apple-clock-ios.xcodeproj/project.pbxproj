@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1D707727B7087900F7F463 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D707627B7087900F7F463 /* AppCoordinatorTests.swift */; };
+		3C1D707927B70F4C00F7F463 /* ContainerCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D707827B70F4C00F7F463 /* ContainerCoordinatorTests.swift */; };
 		3C2B41C427B206DD0064F0E4 /* ContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B41C327B206DD0064F0E4 /* ContainerFactory.swift */; };
 		3C2B41C827B2104A0064F0E4 /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2B41C727B2104A0064F0E4 /* Empty.xib */; };
 		3C4AC05A27B5F1A700B371E4 /* TabBarViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AC05927B5F1A700B371E4 /* TabBarViewSnapshotTests.swift */; };
@@ -57,6 +59,8 @@
 /* Begin PBXFileReference section */
 		078DDCAC498FCA5F8B8129CB /* Pods_clone_apple_clock_ios_clone_apple_clock_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clone_apple_clock_ios_clone_apple_clock_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCF9984F0CF37D5C27ED81D /* Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests/Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3C1D707627B7087900F7F463 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		3C1D707827B70F4C00F7F463 /* ContainerCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerCoordinatorTests.swift; sourceTree = "<group>"; };
 		3C2B41C327B206DD0064F0E4 /* ContainerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerFactory.swift; sourceTree = "<group>"; };
 		3C2B41C727B2104A0064F0E4 /* Empty.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
 		3C4AC05927B5F1A700B371E4 /* TabBarViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewSnapshotTests.swift; sourceTree = "<group>"; };
@@ -123,6 +127,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C1D707527B7086900F7F463 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				3C1D707627B7087900F7F463 /* AppCoordinatorTests.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
 		3C2B41C027B206B80064F0E4 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +172,8 @@
 		3C4AC05127B5F02000B371E4 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				3C1D707527B7086900F7F463 /* Setup */,
+				3C1D707827B70F4C00F7F463 /* ContainerCoordinatorTests.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -642,8 +656,10 @@
 				3C4AC06627B5F64E00B371E4 /* TabBarControllerDelegateMock.swift in Sources */,
 				3C4AC05F27B5F38100B371E4 /* TabBarViewModelMock.swift in Sources */,
 				3C4AC06427B5F5FB00B371E4 /* TabBarControllerTests.swift in Sources */,
+				3C1D707927B70F4C00F7F463 /* ContainerCoordinatorTests.swift in Sources */,
 				3C4AC05A27B5F1A700B371E4 /* TabBarViewSnapshotTests.swift in Sources */,
 				3C4AC06227B5F44C00B371E4 /* Spy.swift in Sources */,
+				3C1D707727B7087900F7F463 /* AppCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
