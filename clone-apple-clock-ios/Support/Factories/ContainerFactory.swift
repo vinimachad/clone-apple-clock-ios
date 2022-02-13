@@ -10,8 +10,8 @@ import UIKit
 
 enum ContainerFactory {
     
-    static func container() -> UIViewController {
+    static func container(delegate: TabBarControllerDelegate?) -> UIViewController {
         let viewModel = TabBarViewModel()
-        return TabBarController(viewModel: viewModel)
+        return TabBarController(viewModel: viewModel, delegate: delegate)
     }
 }

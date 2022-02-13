@@ -1,4 +1,9 @@
 PODS:
+  - iOSSnapshotTestCase (8.0.0):
+    - iOSSnapshotTestCase/SwiftSupport (= 8.0.0)
+  - iOSSnapshotTestCase/Core (8.0.0)
+  - iOSSnapshotTestCase/SwiftSupport (8.0.0):
+    - iOSSnapshotTestCase/Core
   - Reusable (4.1.2):
     - Reusable/Storyboard (= 4.1.2)
     - Reusable/View (= 4.1.2)
@@ -9,11 +14,13 @@ PODS:
     - Reusable
 
 DEPENDENCIES:
+  - iOSSnapshotTestCase
   - SnapKit
   - VTableViewDataSource (from `https://github.com/vinimachad/TableViewDataSource`, tag `0.0.2`)
 
 SPEC REPOS:
   trunk:
+    - iOSSnapshotTestCase
     - Reusable
     - SnapKit
 
@@ -28,10 +35,11 @@ CHECKOUT OPTIONS:
     :tag: 0.0.2
 
 SPEC CHECKSUMS:
+  iOSSnapshotTestCase: a670511f9ee3829c2b9c23e6e68f315fd7b6790f
   Reusable: 6bae6a5e8aa793c9c441db0213c863a64bce9136
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   VTableViewDataSource: 5bf09035eb85ae7753255d6c700d4fdf02213733
 
-PODFILE CHECKSUM: c0e3fc062342226460403edb84595303e44f1c77
+PODFILE CHECKSUM: b61d846a1cdce4bd68768f6734ce64cc9e6674e5
 
 COCOAPODS: 1.11.2

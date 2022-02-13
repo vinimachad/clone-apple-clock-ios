@@ -1,0 +1,12 @@
+/* 
+  TabBar.strings
+  clone-apple-clock-ios
+
+  Created by Vinicius Galhardo Machado on 08/02/22.
+  
+*/
+
+"alarm_label" = "Alarme";
+"word_clock_label" = "Relógio Mundial";
+"stopWatch_label" = "Cronômetro";
+"timer_label" = "Temporizador";
