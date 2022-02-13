@@ -21,6 +21,8 @@
 		3C613F1927B9970200A42C58 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C613F1827B9970200A42C58 /* TableViewDataSource.swift */; };
 		3C613F1C27B999BA00A42C58 /* TableSectionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C613F1B27B999BA00A42C58 /* TableSectionProtocols.swift */; };
 		3C613F1E27B9A7F700A42C58 /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C613F1D27B9A7F700A42C58 /* TableSection.swift */; };
+		3C613F2027B9B1CC00A42C58 /* AlarmCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C613F1F27B9B1CC00A42C58 /* AlarmCoordinator.swift */; };
+		3C613F2327B9CB1500A42C58 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C613F2227B9CB1500A42C58 /* Navigation.swift */; };
 		3C65E4EA27B072FE00E79E8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E4E927B072FE00E79E8C /* AppDelegate.swift */; };
 		3C65E4EC27B072FE00E79E8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E4EB27B072FE00E79E8C /* SceneDelegate.swift */; };
 		3C65E4F327B072FF00E79E8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C65E4F227B072FF00E79E8C /* Assets.xcassets */; };
@@ -79,6 +81,8 @@
 		3C613F1827B9970200A42C58 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		3C613F1B27B999BA00A42C58 /* TableSectionProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionProtocols.swift; sourceTree = "<group>"; };
 		3C613F1D27B9A7F700A42C58 /* TableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
+		3C613F1F27B9B1CC00A42C58 /* AlarmCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCoordinator.swift; sourceTree = "<group>"; };
+		3C613F2227B9CB1500A42C58 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		3C65E4E627B072FE00E79E8C /* clone-apple-clock-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clone-apple-clock-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C65E4E927B072FE00E79E8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C65E4EB27B072FE00E79E8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -244,6 +248,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		3C613F2127B9CB0C00A42C58 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3C613F2227B9CB1500A42C58 /* Navigation.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		3C65E4DD27B072FE00E79E8C = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +319,7 @@
 			children = (
 				3C65E51C27B0736500E79E8C /* Setup */,
 				3C65E52127B0741500E79E8C /* ContainerCoordinator.swift */,
+				3C613F1F27B9B1CC00A42C58 /* AlarmCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -323,6 +336,7 @@
 		3C65E51B27B0733A00E79E8C /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				3C613F2127B9CB0C00A42C58 /* Extension */,
 				3CD8947F27B3336800C3A66D /* UI */,
 				3CD8947927B3328300C3A66D /* Strings */,
 				3C2B41C227B206CB0064F0E4 /* Factories */,
@@ -698,6 +712,7 @@
 				3C65E52927B0773000E79E8C /* TabBarViewModel.swift in Sources */,
 				3C65E51E27B0736D00E79E8C /* AppCoordinator.swift in Sources */,
 				3C613F1C27B999BA00A42C58 /* TableSectionProtocols.swift in Sources */,
+				3C613F2327B9CB1500A42C58 /* Navigation.swift in Sources */,
 				3CF2F89727B95CFF003FC0EA /* AlarmViewModel.swift in Sources */,
 				3C65E4EA27B072FE00E79E8C /* AppDelegate.swift in Sources */,
 				3CD8947827B3322A00C3A66D /* Tab.swift in Sources */,
@@ -708,6 +723,7 @@
 				3C65E52727B0772800E79E8C /* TabBarController.swift in Sources */,
 				3C65E52527B0771800E79E8C /* TabBarView.swift in Sources */,
 				3C65E4EC27B072FE00E79E8C /* SceneDelegate.swift in Sources */,
+				3C613F2027B9B1CC00A42C58 /* AlarmCoordinator.swift in Sources */,
 				3CF2F89527B95CF6003FC0EA /* AlarmController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

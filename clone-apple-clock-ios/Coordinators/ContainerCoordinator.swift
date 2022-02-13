@@ -19,6 +19,8 @@ class ContainerCoordinator: CoordinatorProtocol {
     
     private var navigationController = UINavigationController()
     
+    private lazy var alarmCoordinator: AlarmCoordinator = AlarmCoordinator()
+    
     func start() -> UIViewController {
         let vc = ContainerFactory.container(delegate: self)
         navigationController.modalPresentationStyle = .fullScreen
@@ -36,9 +38,8 @@ extension ContainerCoordinator: TabBarControllerDelegate {
             cv.view.backgroundColor = .green
             return cv
         case .alarm:
-            let cv = UIViewController()
-            cv.view.backgroundColor = .yellow
-            return cv
+            childCoordinator = alarmCoordinator
+            return alarmCoordinator.start()
         case .stopWatch:
             let cv = UIViewController()
             cv.view.backgroundColor = .blue

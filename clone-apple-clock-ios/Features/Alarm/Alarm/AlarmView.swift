@@ -22,6 +22,7 @@ class AlarmView: UIView {
     // MARK: - Private properties
     
     private var viewModel: AlarmViewModelProtocol?
+    private var tableViewDataSource = TableViewDataSource()
     
     // MARK: Init
     
@@ -48,6 +49,11 @@ extension AlarmView {
     
     private func setup() {
         setupConstraints()
+        setupTableView()
+    }
+    
+    private func setupTableView() {
+        tableView.backgroundColor = .black
     }
 }
 
@@ -57,10 +63,13 @@ extension AlarmView {
     
     private func setupConstraints() {
         viewHierarchy()
+        
+        tableView.snp.makeConstraints {
+            $0.edges.equalTo(0)
+        }
     }
     
     private func viewHierarchy() {
-        
+        addSubview(tableView)
     }
 }
-

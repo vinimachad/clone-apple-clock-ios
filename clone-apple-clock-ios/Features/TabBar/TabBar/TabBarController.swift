@@ -49,6 +49,7 @@ class TabBarController<ViewModel: TabBarProtocol>: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hiddenNavigationBar()
         bind()
     }
     

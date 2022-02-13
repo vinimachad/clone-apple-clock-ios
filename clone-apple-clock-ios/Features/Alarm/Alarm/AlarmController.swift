@@ -39,7 +39,13 @@ class AlarmController<ViewModel: AlarmProtocol>: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigation()
         bind()
+    }
+    
+    func setupNavigation() {
+        defaultNavigationBar("alarm_label".localize(.tabBar))
+        setLargeTitle()
     }
 }
 
