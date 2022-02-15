@@ -10,6 +10,11 @@ import UIKit
 
 extension UIViewController {
     
+    enum NavigationSide {
+        case left
+        case right
+    }
+    
     func defaultNavigationBar(_ title: String? = nil) {
         self.title = title
         navigationController?.navigationBar.isTranslucent = false
@@ -24,5 +29,15 @@ extension UIViewController {
     func setLargeTitle() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
+    }
+    
+    func setSystemButton(_ side: NavigationSide, selector: Selector, style: UIBarButtonItem.SystemItem) {
+        let button = UIBarButtonItem(barButtonSystemItem: style, target: self, action: selector)
+        button.tintColor = .orange
+        
+        switch side {
+        case .left: navigationController?.navigationBar.topItem?.leftBarButtonItem = button
+        case .right: navigationController?.navigationBar.topItem?.rightBarButtonItem = button
+        }
     }
 }

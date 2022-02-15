@@ -1,28 +1,22 @@
 //
-//  AlarmView.swift
+//  CreateAlarmView.swift
 //  clone-apple-clock-ios
 //
 //  Created by Vinicius Galhardo Machado on 13/02/22.
 //
 
-import Foundation
-
 import UIKit
 import SnapKit
 
+protocol CreateAlarmViewModelProtocol {}
 
-protocol AlarmViewModelProtocol {}
-
-class AlarmView: UIView {
+class CreateAlarmView: UIView {
     
     // MARK: - UI Components
     
-    private var tableView = UITableView(frame: CGRect(), style: .grouped)
-    
     // MARK: - Private properties
     
-    private var viewModel: AlarmViewModelProtocol?
-    private var tableViewDataSource = TableViewDataSource()
+    private var viewModel: CreateAlarmViewModelProtocol?
     
     // MARK: Init
     
@@ -38,38 +32,31 @@ class AlarmView: UIView {
     
     // MARK: - Bind
     
-    func bindIn(viewModel: AlarmViewModelProtocol) {
+    func bindIn(viewModel: CreateAlarmViewModelProtocol) {
         self.viewModel = viewModel
     }
 }
 
 // MARK: - Setup view
 
-extension AlarmView {
+extension CreateAlarmView {
     
     private func setup() {
         setupConstraints()
-        setupTableView()
-    }
-    
-    private func setupTableView() {
-        
+        backgroundColor = .systemGray6
     }
 }
 
 // MARK: - Setup constraints
 
-extension AlarmView {
+extension CreateAlarmView {
     
     private func setupConstraints() {
         viewHierarchy()
-        
-        tableView.snp.makeConstraints {
-            $0.edges.equalTo(0)
-        }
     }
     
     private func viewHierarchy() {
-        addSubview(tableView)
+        
     }
 }
+

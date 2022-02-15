@@ -15,8 +15,8 @@ enum ContainerFactory {
         return TabBarController(viewModel: viewModel, delegate: delegate)
     }
     
-    static func alarm() -> UIViewController {
+    static func alarm(delegate: AlarmControllerDelegate?) -> UIViewController {
         let vm = AlarmViewModel()
-        return AlarmController(viewModel: vm)
+        return AlarmController(viewModel: vm, delegate: delegate)
     }
 }

@@ -1,33 +1,25 @@
 //
-//  AlarmController.swift
+//  CreateAlarmController.swift
 //  clone-apple-clock-ios
 //
 //  Created by Vinicius Galhardo Machado on 13/02/22.
 //
 
 import Foundation
-
-import Foundation
 import UIKit
 
-protocol AlarmControllerDelegate: AnyObject {
-    func pushCreateAlarm()
-}
-
-class AlarmController<ViewModel: AlarmProtocol>: UIViewController {
+class CreateAlarmController<ViewModel: CreateAlarmProtocol>: UIViewController {
     
     // MARK: - Private properties
     
-    private let contentView: AlarmView
-    private weak var delegate: AlarmControllerDelegate?
+    private let contentView: CreateAlarmView
     private var viewModel: ViewModel
     
     // MARK: - Init
     
-    init(viewModel: ViewModel, delegate: AlarmControllerDelegate?) {
+    init(viewModel: ViewModel) {
         self.viewModel = viewModel
-        self.delegate = delegate
-        contentView = AlarmView()
+        contentView = CreateAlarmView()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -49,22 +41,25 @@ class AlarmController<ViewModel: AlarmProtocol>: UIViewController {
         bind()
     }
     
-    func setupNavigation() {
-        defaultNavigationBar("alarm_label".localize(.tabBar))
-        setLargeTitle()
-        setSystemButton(.right, selector: #selector(didTapAddAlarm), style: .add)
+    // MARK: - Setup
+    
+    private func setupNavigation() {
+        defaultNavigationBar("add_alarm_label".localize(.alarm))
+        navigationController?.navigationBar.backgroundColor = .systemGray6
+        setSystemButton(.right, selector: #selector(didSaveAlarm), style: .save)
+        setSystemButton(.left, selector: #selector(didSaveAlarm), style: .cancel)
     }
     
     // MARK: - Actions
     
-    @objc private func didTapAddAlarm() {
-        delegate?.pushCreateAlarm()
+    @objc private func didSaveAlarm() {
+        
     }
 }
 
 // MARK: - Bind
 
-extension AlarmController {
+extension CreateAlarmController {
     
     private func bind() {
         contentView.bindIn(viewModel: viewModel)

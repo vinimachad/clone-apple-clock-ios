@@ -1,5 +1,5 @@
 //
-//  AlarmCoordinator.swift
+//  CreateAlarmCoordinator.swift
 //  clone-apple-clock-ios
 //
 //  Created by Vinicius Galhardo Machado on 13/02/22.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class AlarmCoordinator: CoordinatorProtocol {
+class CreateAlarmCoordinator: CoordinatorProtocol {
     
     // MARK: - Public properties
     
@@ -26,19 +26,11 @@ class AlarmCoordinator: CoordinatorProtocol {
     // MARK: - Start
     
     func start() -> UIViewController {
-        let vc = ContainerFactory.alarm(delegate: self)
-        navigationController.modalPresentationStyle = .fullScreen
+        let vc = AlarmFactory.createAlarm()
+        navigationController.modalPresentationStyle = .pageSheet
         navigationController.setViewControllers([vc], animated: true)
         return navigationController
     }
 }
 
-extension AlarmCoordinator: AlarmControllerDelegate {
-    
-    func pushCreateAlarm() {
-        let coordinator = CreateAlarmCoordinator()
-        coordinator.childDelegate = childDelegate
-        childCoordinator = coordinator
-        navigationController.present(coordinator.start(), animated: true)
-    }
-}
+extension CreateAlarmCoordinator {}
