@@ -27,4 +27,6 @@ protocol CellProtocol {
 
 protocol CellViewModelProtocol {}
 
-extension UITableViewCell: Reusable {}
+extension UITableViewCell: Reusable {
+
+}

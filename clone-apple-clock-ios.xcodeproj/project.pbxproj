@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3C1D707727B7087900F7F463 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D707627B7087900F7F463 /* AppCoordinatorTests.swift */; };
 		3C1D707927B70F4C00F7F463 /* ContainerCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D707827B70F4C00F7F463 /* ContainerCoordinatorTests.swift */; };
+		3C2B3FEA27BC740C00B50E9B /* RightDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B3FE927BC740C00B50E9B /* RightDetailCell.swift */; };
+		3C2B3FEC27BC784100B50E9B /* RightDetailCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B3FEB27BC784100B50E9B /* RightDetailCellViewModel.swift */; };
 		3C2B41C427B206DD0064F0E4 /* ContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B41C327B206DD0064F0E4 /* ContainerFactory.swift */; };
 		3C2B41C827B2104A0064F0E4 /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2B41C727B2104A0064F0E4 /* Empty.xib */; };
 		3C4AC05A27B5F1A700B371E4 /* TabBarViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AC05927B5F1A700B371E4 /* TabBarViewSnapshotTests.swift */; };
@@ -76,6 +78,8 @@
 		2CCF9984F0CF37D5C27ED81D /* Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests/Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3C1D707627B7087900F7F463 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
 		3C1D707827B70F4C00F7F463 /* ContainerCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerCoordinatorTests.swift; sourceTree = "<group>"; };
+		3C2B3FE927BC740C00B50E9B /* RightDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightDetailCell.swift; sourceTree = "<group>"; };
+		3C2B3FEB27BC784100B50E9B /* RightDetailCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightDetailCellViewModel.swift; sourceTree = "<group>"; };
 		3C2B41C327B206DD0064F0E4 /* ContainerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerFactory.swift; sourceTree = "<group>"; };
 		3C2B41C727B2104A0064F0E4 /* Empty.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
 		3C4AC05927B5F1A700B371E4 /* TabBarViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewSnapshotTests.swift; sourceTree = "<group>"; };
@@ -163,6 +167,15 @@
 				3C1D707627B7087900F7F463 /* AppCoordinatorTests.swift */,
 			);
 			path = Setup;
+			sourceTree = "<group>";
+		};
+		3C2B3FE827BC73F700B50E9B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3C2B3FE927BC740C00B50E9B /* RightDetailCell.swift */,
+				3C2B3FEB27BC784100B50E9B /* RightDetailCellViewModel.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		3C2B41C027B206B80064F0E4 /* TabBar */ = {
@@ -274,6 +287,7 @@
 		3C613F2627B9D55500A42C58 /* CreateAlarm */ = {
 			isa = PBXGroup;
 			children = (
+				3C2B3FE827BC73F700B50E9B /* Cells */,
 				3C613F2727B9D56400A42C58 /* CreateAlarmView.swift */,
 				3C613F2927B9D56E00A42C58 /* CreateAlarmController.swift */,
 				3C613F2B27B9D57700A42C58 /* CreateAlarmViewModel.swift */,
@@ -751,6 +765,7 @@
 				3CF2F89727B95CFF003FC0EA /* AlarmViewModel.swift in Sources */,
 				3C65E4EA27B072FE00E79E8C /* AppDelegate.swift in Sources */,
 				3CD8947827B3322A00C3A66D /* Tab.swift in Sources */,
+				3C2B3FEA27BC740C00B50E9B /* RightDetailCell.swift in Sources */,
 				3CF2F89327B95CEE003FC0EA /* AlarmView.swift in Sources */,
 				3C65E52227B0741500E79E8C /* ContainerCoordinator.swift in Sources */,
 				3C2B41C427B206DD0064F0E4 /* ContainerFactory.swift in Sources */,
@@ -758,6 +773,7 @@
 				3C65E52727B0772800E79E8C /* TabBarController.swift in Sources */,
 				3C65E52527B0771800E79E8C /* TabBarView.swift in Sources */,
 				3C65E4EC27B072FE00E79E8C /* SceneDelegate.swift in Sources */,
+				3C2B3FEC27BC784100B50E9B /* RightDetailCellViewModel.swift in Sources */,
 				3C613F2027B9B1CC00A42C58 /* AlarmCoordinator.swift in Sources */,
 				3CF2F89527B95CF6003FC0EA /* AlarmController.swift in Sources */,
 				3C613F2527B9D50700A42C58 /* AlarmFactory.swift in Sources */,

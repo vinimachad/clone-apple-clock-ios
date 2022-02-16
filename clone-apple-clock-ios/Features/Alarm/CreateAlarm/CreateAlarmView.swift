@@ -8,15 +8,21 @@
 import UIKit
 import SnapKit
 
-protocol CreateAlarmViewModelProtocol {}
+protocol CreateAlarmViewModelProtocol {
+    var sections: [TableSectionProtocol] { get }
+}
 
 class CreateAlarmView: UIView {
     
     // MARK: - UI Components
     
+    private var dataPicker = UIDatePicker()
+    private var tableView = UITableView(frame: CGRect(), style: .insetGrouped)
+    
     // MARK: - Private properties
     
     private var viewModel: CreateAlarmViewModelProtocol?
+    private var tableViewDataSource = TableViewDataSource()
     
     // MARK: Init
     
@@ -34,6 +40,7 @@ class CreateAlarmView: UIView {
     
     func bindIn(viewModel: CreateAlarmViewModelProtocol) {
         self.viewModel = viewModel
+        tableViewDataSource.sections = viewModel.sections
     }
 }
 
@@ -44,6 +51,18 @@ extension CreateAlarmView {
     private func setup() {
         setupConstraints()
         backgroundColor = .systemGray6
+        setupPickerView()
+        setupTableView()
+    }
+    
+    private func setupTableView() {
+        tableViewDataSource.tableView = tableView
+    }
+    
+    private func setupPickerView() {
+        dataPicker.preferredDatePickerStyle = .wheels
+        dataPicker.datePickerMode = .time
+        dataPicker.locale = Locale.init(identifier: "en")
     }
 }
 
@@ -53,10 +72,23 @@ extension CreateAlarmView {
     
     private func setupConstraints() {
         viewHierarchy()
+        
+        dataPicker.snp.makeConstraints {
+            $0.leading.equalTo(snp.leadingMargin)
+            $0.trailing.equalTo(snp.trailingMargin)
+            $0.top.equalTo(snp.topMargin)
+        }
+        
+        tableView.snp.makeConstraints {
+            $0.top.equalTo(dataPicker.snp.bottomMargin)
+            $0.trailing.equalTo(snp.trailingMargin)
+            $0.leading.equalTo(snp.leadingMargin)
+            $0.bottom.equalTo(snp.bottomMargin)
+        }
     }
     
     private func viewHierarchy() {
-        
+        addSubview(dataPicker)
+        addSubview(tableView)
     }
 }
-

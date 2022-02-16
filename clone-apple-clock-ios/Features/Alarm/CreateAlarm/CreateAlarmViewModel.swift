@@ -7,15 +7,28 @@
 
 import Foundation
 
-import Foundation
-
 protocol CreateAlarmProtocol: CreateAlarmViewModelProtocol {
     
 }
 
 class CreateAlarmViewModel {
     
+    enum Selections: CaseIterable {
+        case `repeat`
+        case label
+        case sound
+        case snooze
+    }
+    
     // MARK: - Public properties
+    
+    lazy var sections: [TableSectionProtocol] = {
+        [
+            TableSection<RightDetailCell>(
+                viewModels: [RightDetailCellViewModel(), RightDetailCellViewModel()]
+            )
+        ]
+    }()
     
     // MARK: - Private properties
     
