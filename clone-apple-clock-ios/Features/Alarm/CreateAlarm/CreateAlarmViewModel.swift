@@ -48,6 +48,9 @@ class CreateAlarmViewModel {
 
 extension CreateAlarmViewModel: CreateAlarmProtocol {
     
+    func didChangeAlarmValue(_ time: String) {
+        print(time)
+    }
 }
 
 // MARK: - Selections

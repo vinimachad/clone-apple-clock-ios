@@ -10,6 +10,7 @@ import SnapKit
 
 protocol CreateAlarmViewModelProtocol {
     var sections: [TableSectionProtocol] { get }
+    func didChangeAlarmValue(_ time: String)
 }
 
 class CreateAlarmView: UIView {
@@ -63,6 +64,17 @@ extension CreateAlarmView {
         dataPicker.preferredDatePickerStyle = .wheels
         dataPicker.datePickerMode = .time
         dataPicker.locale = Locale.init(identifier: "en")
+        dataPicker.addTarget(self, action: #selector(didChangePicker(sender:)), for: .valueChanged)
+    }
+    
+    // MARK: - Actions
+    
+    @objc private func didChangePicker(sender: UIDatePicker) {
+        let timeFormatter = DateFormatter()
+            timeFormatter.timeStyle = DateFormatter.Style.short
+
+        let strDate = timeFormatter.string(from: dataPicker.date)
+        viewModel?.didChangeAlarmValue(strDate)
     }
 }
 
