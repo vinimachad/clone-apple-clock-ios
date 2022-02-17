@@ -31,9 +31,7 @@ class CreateAlarmViewModel {
     
     // MARK: - Init
     
-    init() {
-        
-    }
+    init() { }
     
     private func generateSelectsSection() -> TableSectionProtocol {
         let viewModels = Selections.allCases.map {
