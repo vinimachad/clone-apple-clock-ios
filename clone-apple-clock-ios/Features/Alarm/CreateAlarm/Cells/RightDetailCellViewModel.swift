@@ -7,15 +7,25 @@
 
 import Foundation
 
-class RightDetailCellViewModel: RightDetailCellViewModelProtocol {
+class RightDetailCellViewModel {
     
     // MARK: - Public properties
     
-    // MARK: - Private properties
+    var title: String?
+    var result: String?
+    var onSelectCell: (() -> Void)?
     
     // MARK: - Init
     
-    init() {
-        
+    init(title: String?, result: String?, onSelectCell: (() -> Void)?) {
+        self.title = title
+        self.result = result
+        self.onSelectCell = onSelectCell
+    }
+    
+    func didSelectedCell() {
+        onSelectCell?()
     }
 }
+
+extension RightDetailCellViewModel: RightDetailCellViewModelProtocol {}

@@ -17,16 +17,13 @@ class CreateAlarmViewModel {
         case `repeat`
         case label
         case sound
-        case snooze
     }
     
     // MARK: - Public properties
     
     lazy var sections: [TableSectionProtocol] = {
         [
-            TableSection<RightDetailCell>(
-                viewModels: [RightDetailCellViewModel(), RightDetailCellViewModel()]
-            )
+            generateSelectsSection()
         ]
     }()
     
@@ -37,10 +34,39 @@ class CreateAlarmViewModel {
     init() {
         
     }
+    
+    private func generateSelectsSection() -> TableSectionProtocol {
+        let viewModels = Selections.allCases.map {
+            RightDetailCellViewModel(title: $0.title, result: $0.result, onSelectCell: { })
+        }
+        
+        return TableSection<RightDetailCell>(viewModels: viewModels)
+    }
 }
 
 // MARK: - CreateAlarmProtocol
 
 extension CreateAlarmViewModel: CreateAlarmProtocol {
     
+}
+
+// MARK: - Selections
+
+extension CreateAlarmViewModel.Selections {
+    
+    var title: String? {
+        switch self {
+        case .repeat: return "repeat_label".localize(.alarm)
+        case .label: return "title_label".localize(.alarm)
+        case .sound: return "sound_label".localize(.alarm)
+        }
+    }
+    
+    var result: String? {
+        switch self {
+        case .repeat: return "Nunca"
+        case .label: return "Alarme"
+        case .sound: return "Radar"
+        }
+    }
 }

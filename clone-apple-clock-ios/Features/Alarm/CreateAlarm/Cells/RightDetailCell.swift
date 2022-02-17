@@ -9,7 +9,12 @@ import Foundation
 import UIKit
 import SnapKit
 
-protocol RightDetailCellViewModelProtocol: CellViewModelProtocol {}
+protocol RightDetailCellViewModelProtocol: CellViewModelProtocol {
+    var title: String? { get }
+    var result: String? { get }
+    var onSelectCell: (() -> Void)? { get set }
+    func didSelectedCell()
+}
 
 class RightDetailCell: UITableViewCell, CellProtocol {
     
@@ -38,6 +43,8 @@ class RightDetailCell: UITableViewCell, CellProtocol {
     
     func bindIn(viewModel: RightDetailCellViewModelProtocol) {
         self.viewModel = viewModel
+        titleLabel.text = viewModel.title
+        resultLabel.text = viewModel.result
     }
 }
 
@@ -47,17 +54,11 @@ extension RightDetailCell {
     
     private func setup() {
         setupConstraints()
-        setupTitleLabel()
         setupResultLabel()
         accessoryType = .disclosureIndicator
     }
     
-    private func setupTitleLabel() {
-        titleLabel.text = "test"
-    }
-    
     private func setupResultLabel() {
-        resultLabel.text = "test2"
         resultLabel.textColor = .systemGray
     }
 }
