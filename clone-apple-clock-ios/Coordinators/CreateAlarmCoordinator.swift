@@ -26,11 +26,19 @@ class CreateAlarmCoordinator: CoordinatorProtocol {
     // MARK: - Start
     
     func start() -> UIViewController {
-        let vc = AlarmFactory.createAlarm()
+        let vc = AlarmFactory.createAlarm(delegate: self)
         navigationController.modalPresentationStyle = .pageSheet
         navigationController.setViewControllers([vc], animated: true)
         return navigationController
     }
+    
+    // MARK: - Dismiss
+    
+    func returnNavigation() {
+        dismiss()
+    }
 }
 
-extension CreateAlarmCoordinator {}
+extension CreateAlarmCoordinator: CreateAlarmControllerDelegate {
+    
+}

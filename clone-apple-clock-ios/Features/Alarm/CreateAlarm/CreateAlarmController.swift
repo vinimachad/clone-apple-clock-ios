@@ -8,17 +8,23 @@
 import Foundation
 import UIKit
 
+protocol CreateAlarmControllerDelegate: AnyObject {
+    func returnNavigation()
+}
+
 class CreateAlarmController<ViewModel: CreateAlarmProtocol>: UIViewController {
     
     // MARK: - Private properties
     
+    private weak var delegate: CreateAlarmControllerDelegate?
     private let contentView: CreateAlarmView
     private var viewModel: ViewModel
     
     // MARK: - Init
     
-    init(viewModel: ViewModel) {
+    init(viewModel: ViewModel, delegate: CreateAlarmControllerDelegate?) {
         self.viewModel = viewModel
+        self.delegate = delegate
         contentView = CreateAlarmView()
         super.init(nibName: nil, bundle: nil)
     }
@@ -53,6 +59,10 @@ class CreateAlarmController<ViewModel: CreateAlarmProtocol>: UIViewController {
     // MARK: - Actions
     
     @objc private func didSaveAlarm() {
+        viewModel.didSaveAlarm()
+    }
+    
+    @objc private func didCancelToCreateAlarm() {
         
     }
 }
@@ -63,5 +73,9 @@ extension CreateAlarmController {
     
     private func bind() {
         contentView.bindIn(viewModel: viewModel)
+        
+        viewModel.onSuccessToSaveAlarm = { [weak self] in
+            self?.delegate?.returnNavigation()
+        }
     }
 }

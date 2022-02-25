@@ -42,6 +42,7 @@ class CreateAlarmView: UIView {
     func bindIn(viewModel: CreateAlarmViewModelProtocol) {
         self.viewModel = viewModel
         tableViewDataSource.sections = viewModel.sections
+        viewModel.didChangeAlarmValue(dataPicker.date.toString(format: Date.defaultTimeFormat))
     }
 }
 
@@ -70,11 +71,7 @@ extension CreateAlarmView {
     // MARK: - Actions
     
     @objc private func didChangePicker(sender: UIDatePicker) {
-        let timeFormatter = DateFormatter()
-            timeFormatter.timeStyle = DateFormatter.Style.short
-
-        let strDate = timeFormatter.string(from: dataPicker.date)
-        viewModel?.didChangeAlarmValue(strDate)
+        viewModel?.didChangeAlarmValue(dataPicker.date.toString(format: Date.defaultTimeFormat))
     }
 }
 

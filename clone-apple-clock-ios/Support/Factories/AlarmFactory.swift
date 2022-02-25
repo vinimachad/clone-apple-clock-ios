@@ -10,8 +10,9 @@ import UIKit
 
 enum AlarmFactory {
     
-    static func createAlarm() -> UIViewController {
-        let vm = CreateAlarmViewModel()
-        return CreateAlarmController(viewModel: vm)
+    static func createAlarm(delegate: CreateAlarmControllerDelegate?) -> UIViewController {
+        let createAlarmUseCase = CreateAlarmUseCase(api: AlarmRoutes())
+        let vm = CreateAlarmViewModel(persist: PersistContainer.shared, createAlarmUseCase: createAlarmUseCase)
+        return CreateAlarmController(viewModel: vm, delegate: delegate)
     }
 }

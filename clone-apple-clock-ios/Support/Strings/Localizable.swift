@@ -12,6 +12,7 @@ enum LocalizableFiles: String {
     case error = "Error"
     case tabBar = "TabBar"
     case alarm = "Alarm"
+    case `repeat` = "Repeat"
 }
 
 extension String {

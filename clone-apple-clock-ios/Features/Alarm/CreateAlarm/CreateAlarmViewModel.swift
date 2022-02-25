@@ -8,7 +8,10 @@
 import Foundation
 
 protocol CreateAlarmProtocol: CreateAlarmViewModelProtocol {
-    
+    var onStartToSaveAlarm: (() -> Void)? { get set }
+    var onSuccessToSaveAlarm: (() -> Void)? { get set }
+    var onFailureToSaveAlarm: ((String) -> Void)? { get set }
+    func didSaveAlarm()
 }
 
 class CreateAlarmViewModel {
@@ -21,6 +24,10 @@ class CreateAlarmViewModel {
     
     // MARK: - Public properties
     
+    var onStartToSaveAlarm: (() -> Void)?
+    var onSuccessToSaveAlarm: (() -> Void)?
+    var onFailureToSaveAlarm: ((String) -> Void)?
+    
     lazy var sections: [TableSectionProtocol] = {
         [
             generateSelectsSection()
@@ -29,9 +36,16 @@ class CreateAlarmViewModel {
     
     // MARK: - Private properties
     
+    private var alarm: Alarm = Alarm()
+    private var persist: PersistContainerProtocol
+    private var createAlarmUseCase: CreateAlarmUseCaseProtocol
+    
     // MARK: - Init
     
-    init() { }
+    init(persist: PersistContainerProtocol, createAlarmUseCase: CreateAlarmUseCaseProtocol) {
+        self.persist = persist
+        self.createAlarmUseCase = createAlarmUseCase
+    }
     
     private func generateSelectsSection() -> TableSectionProtocol {
         let viewModels = Selections.allCases.map {
@@ -46,8 +60,33 @@ class CreateAlarmViewModel {
 
 extension CreateAlarmViewModel: CreateAlarmProtocol {
     
+    func didSaveAlarm() {
+        createAlarm()
+    }
+    
     func didChangeAlarmValue(_ time: String) {
-        print(time)
+        alarm.time = time.toDate()
+    }
+    
+    // MARK: - Requests
+    
+    func createAlarm() {
+        onStartToSaveAlarm?()
+        let newAlarm = AlarmCoreData(context: persist.context)
+        newAlarm.time = alarm.time
+        newAlarm.repeat = alarm.repeat.rawValue
+        newAlarm.label = alarm.label
+        newAlarm.snooze = alarm.snooze
+        newAlarm.sound = alarm.sound.rawValue
+        
+        createAlarmUseCase.execute(
+            success: { [weak self] in
+                self?.onSuccessToSaveAlarm?()
+            },
+            failure: { [weak self] error in
+                self?.onFailureToSaveAlarm?(error)
+            }
+        )
     }
 }
 

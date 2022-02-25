@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 protocol TabBarControllerDelegate: AnyObject {
     func getControllerByTab(_ tab: Tab) -> UIViewController
