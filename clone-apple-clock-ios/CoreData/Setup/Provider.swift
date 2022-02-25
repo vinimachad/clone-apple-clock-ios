@@ -14,12 +14,12 @@ protocol ProviderProtocol {
 }
 
 class Provider: ProviderProtocol {
-        
+    
     // MARK: - Get
     
-    func getEntityProperties<T: NSManagedObject>(name: String, completion: ((Result<[T], Error>) -> Void)?) {
+    func getEntityProperties<T>(name: String, completion: ((Result<[T], Error>) -> Void)?) where T : NSManagedObject {
         do {
-            let result = try PersistContainer.shared.context.fetch(NSFetchRequest<T>(entityName: name))
+            let result = try PersistContainer.shared.context.fetch(NSFetchRequest<T>(entityName: name) )
             completion?(.success(result))
         } catch let error {
             completion?(.failure(error))

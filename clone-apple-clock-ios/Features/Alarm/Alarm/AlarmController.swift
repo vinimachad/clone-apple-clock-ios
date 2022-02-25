@@ -45,6 +45,7 @@ class AlarmController<ViewModel: AlarmProtocol>: UIViewController {
         super.viewDidLoad()
         setupNavigation()
         bind()
+        viewModel.getAlarms()
     }
     
     func setupNavigation() {

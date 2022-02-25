@@ -9,10 +9,13 @@ import Foundation
 import CoreData
 
 protocol AlarmRoutesProtocol {
-    func createAlarm(completion: ((Result<Void, Error>) -> Void)?) 
+    func createAlarm(completion: ((Result<Void, Error>) -> Void)?)
+    func getAlarms<T: NSManagedObject>(name: String, completion: ((Result<[T], Error>) -> Void)?)
 }
 
 class AlarmRoutes: AlarmRoutesProtocol {
+    
+    
     
     // MARK: - Private properties
     
@@ -22,5 +25,9 @@ class AlarmRoutes: AlarmRoutesProtocol {
     
     func createAlarm(completion: ((Result<Void, Error>) -> Void)?) {
         provider.saveEntity(completion: completion)
+    }
+    
+    func getAlarms<T>(name: String, completion: ((Result<[T], Error>) -> Void)?) where T : NSManagedObject {
+        provider.getEntityProperties(name: name, completion: completion)
     }
 }

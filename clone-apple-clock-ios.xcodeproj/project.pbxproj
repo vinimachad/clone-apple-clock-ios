@@ -14,6 +14,7 @@
 		3C2B41C427B206DD0064F0E4 /* ContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B41C327B206DD0064F0E4 /* ContainerFactory.swift */; };
 		3C2B41C827B2104A0064F0E4 /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2B41C727B2104A0064F0E4 /* Empty.xib */; };
 		3C38C1FE27C85C970047CD05 /* Repeat.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C38C1FD27C85C970047CD05 /* Repeat.strings */; };
+		3C38C20127C868B10047CD05 /* GetAlarmsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C38C20027C868B10047CD05 /* GetAlarmsUseCase.swift */; };
 		3C4AC05A27B5F1A700B371E4 /* TabBarViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AC05927B5F1A700B371E4 /* TabBarViewSnapshotTests.swift */; };
 		3C4AC05C27B5F2BB00B371E4 /* Snapshots in Resources */ = {isa = PBXBuildFile; fileRef = 3C4AC05B27B5F2BB00B371E4 /* Snapshots */; };
 		3C4AC05F27B5F38100B371E4 /* TabBarViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AC05E27B5F38100B371E4 /* TabBarViewModelMock.swift */; };
@@ -94,6 +95,7 @@
 		3C2B41C327B206DD0064F0E4 /* ContainerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerFactory.swift; sourceTree = "<group>"; };
 		3C2B41C727B2104A0064F0E4 /* Empty.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
 		3C38C1FD27C85C970047CD05 /* Repeat.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Repeat.strings; sourceTree = "<group>"; };
+		3C38C20027C868B10047CD05 /* GetAlarmsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlarmsUseCase.swift; sourceTree = "<group>"; };
 		3C4AC05927B5F1A700B371E4 /* TabBarViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewSnapshotTests.swift; sourceTree = "<group>"; };
 		3C4AC05B27B5F2BB00B371E4 /* Snapshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Snapshots; sourceTree = "<group>"; };
 		3C4AC05E27B5F38100B371E4 /* TabBarViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModelMock.swift; sourceTree = "<group>"; };
@@ -218,6 +220,14 @@
 				3C613F2427B9D50700A42C58 /* AlarmFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		3C38C1FF27C868A00047CD05 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3C38C20027C868B10047CD05 /* GetAlarmsUseCase.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		3C4AC04F27B5F01200B371E4 /* Support */ = {
@@ -547,6 +557,7 @@
 		3CF2F89127B95CE4003FC0EA /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				3C38C1FF27C868A00047CD05 /* Domain */,
 				3CF2F89227B95CEE003FC0EA /* AlarmView.swift */,
 				3CF2F89427B95CF6003FC0EA /* AlarmController.swift */,
 				3CF2F89627B95CFF003FC0EA /* AlarmViewModel.swift */,
@@ -848,6 +859,7 @@
 				3C613F1927B9970200A42C58 /* TableViewDataSource.swift in Sources */,
 				3C613F2827B9D56400A42C58 /* CreateAlarmView.swift in Sources */,
 				3C65E52927B0773000E79E8C /* TabBarViewModel.swift in Sources */,
+				3C38C20127C868B10047CD05 /* GetAlarmsUseCase.swift in Sources */,
 				3C613F2A27B9D56E00A42C58 /* CreateAlarmController.swift in Sources */,
 				3CBD453227C159EB002E9053 /* CreateAlarmUseCase.swift in Sources */,
 				3C6F5F2527BF0528005DFE7C /* Sound.swift in Sources */,

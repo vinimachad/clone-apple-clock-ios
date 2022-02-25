@@ -17,7 +17,8 @@ enum ContainerFactory {
     }
     
     static func alarm(delegate: AlarmControllerDelegate?) -> UIViewController {
-        let vm = AlarmViewModel()
+        let getAlarmsUseCase = GetAlarmsUseCase(api: AlarmRoutes())
+        let vm = AlarmViewModel(getAlarmsUseCase: getAlarmsUseCase)
         return AlarmController(viewModel: vm, delegate: delegate)
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 import Foundation
 
 protocol AlarmProtocol: AlarmViewModelProtocol {
-    
+    func getAlarms()
 }
 
 class AlarmViewModel {
@@ -18,11 +18,11 @@ class AlarmViewModel {
     // MARK: - Public properties
     
     // MARK: - Private properties
-    
+    private var getAlarmsUseCase: GetAlarmsUseCaseProtocol
     // MARK: - Init
     
-    init() {
-        
+    init(getAlarmsUseCase: GetAlarmsUseCaseProtocol) {
+        self.getAlarmsUseCase = getAlarmsUseCase
     }
 }
 
@@ -30,4 +30,14 @@ class AlarmViewModel {
 
 extension AlarmViewModel: AlarmProtocol {
     
+    func getAlarms() {
+        getAlarmsUseCase.execute(
+            success: { alarms in
+                print("alarmes -> ", alarms.count)
+            },
+            failure: { error in
+                print(error)
+            }
+        )
+    }
 }
