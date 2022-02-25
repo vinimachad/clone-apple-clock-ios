@@ -8,17 +8,10 @@
 import Foundation
 import CoreData
 
-//@objc(AlarmCoreData)
-public class AlarmCoreData: NSManagedObject {
-    
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<AlarmCoreData> {
-        return NSFetchRequest<AlarmCoreData>(entityName: "AlarmCoreData")
-    }
-
-    @NSManaged public var label: String?
-    @NSManaged public var snooze: Bool
-    @NSManaged public var sound: String?
-    @NSManaged public var `repeat`: String?
-    @NSManaged public var time: Date?
-    
+class AlarmCoreData: NSManagedObject {
+    @NSManaged var label: String?
+    @NSManaged var snooze: Bool
+    @NSManaged var sound: String?
+    @NSManaged var `repeat`: String?
+    @NSManaged var time: Date?
 }

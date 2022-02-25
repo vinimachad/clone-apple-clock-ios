@@ -15,8 +15,6 @@ protocol AlarmRoutesProtocol {
 
 class AlarmRoutes: AlarmRoutesProtocol {
     
-    
-    
     // MARK: - Private properties
     
     private var provider = Provider()
@@ -27,7 +25,7 @@ class AlarmRoutes: AlarmRoutesProtocol {
         provider.saveEntity(completion: completion)
     }
     
-    func getAlarms<T>(name: String, completion: ((Result<[T], Error>) -> Void)?) where T : NSManagedObject {
+    func getAlarms<T: NSManagedObject>(name: String, completion: ((Result<[T], Error>) -> Void)?) {
         provider.getEntityProperties(name: name, completion: completion)
     }
 }

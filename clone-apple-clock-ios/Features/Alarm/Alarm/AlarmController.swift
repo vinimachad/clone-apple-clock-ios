@@ -12,7 +12,7 @@ protocol AlarmControllerDelegate: AnyObject {
     func pushCreateAlarm()
 }
 
-class AlarmController<ViewModel: AlarmProtocol>: UIViewController {
+class AlarmController<ViewModel: AlarmProtocol>: UIViewController, AlarmObserver {
     
     // MARK: - Private properties
     
@@ -41,11 +41,16 @@ class AlarmController<ViewModel: AlarmProtocol>: UIViewController {
         view = contentView
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.getAlarms()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigation()
+        updateAlarmObserver(#selector(updateAlarm))
         bind()
-        viewModel.getAlarms()
     }
     
     func setupNavigation() {
@@ -58,6 +63,10 @@ class AlarmController<ViewModel: AlarmProtocol>: UIViewController {
     
     @objc private func didTapAddAlarm() {
         delegate?.pushCreateAlarm()
+    }
+    
+    @objc private func updateAlarm() {
+        viewModel.getAlarms()
     }
 }
 

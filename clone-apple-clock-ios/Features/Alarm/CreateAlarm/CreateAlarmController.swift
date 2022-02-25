@@ -12,7 +12,7 @@ protocol CreateAlarmControllerDelegate: AnyObject {
     func returnNavigation()
 }
 
-class CreateAlarmController<ViewModel: CreateAlarmProtocol>: UIViewController {
+class CreateAlarmController<ViewModel: CreateAlarmProtocol>: UIViewController, PostAlarm {
     
     // MARK: - Private properties
     
@@ -64,6 +64,7 @@ class CreateAlarmController<ViewModel: CreateAlarmProtocol>: UIViewController {
     
     @objc private func didCancelToCreateAlarm() {
         delegate?.returnNavigation()
+        postUpdateAlarm()
     }
 }
 
@@ -76,6 +77,7 @@ extension CreateAlarmController {
         
         viewModel.onSuccessToSaveAlarm = { [weak self] in
             self?.delegate?.returnNavigation()
+            self?.postUpdateAlarm()
         }
     }
 }

@@ -17,7 +17,7 @@ class Provider: ProviderProtocol {
     
     // MARK: - Get
     
-    func getEntityProperties<T>(name: String, completion: ((Result<[T], Error>) -> Void)?) where T : NSManagedObject {
+    func getEntityProperties<T: NSManagedObject>(name: String, completion: ((Result<[T], Error>) -> Void)?) {
         do {
             let result = try PersistContainer.shared.context.fetch(NSFetchRequest<T>(entityName: name) )
             completion?(.success(result))
