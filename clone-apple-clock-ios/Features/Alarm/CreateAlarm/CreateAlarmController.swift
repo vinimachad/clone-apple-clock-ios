@@ -53,7 +53,7 @@ class CreateAlarmController<ViewModel: CreateAlarmProtocol>: UIViewController {
         defaultNavigationBar("add_alarm_label".localize(.alarm))
         navigationController?.navigationBar.backgroundColor = .systemGray6
         setSystemButton(.right, selector: #selector(didSaveAlarm), style: .save)
-        setSystemButton(.left, selector: #selector(didSaveAlarm), style: .cancel)
+        setSystemButton(.left, selector: #selector(didCancelToCreateAlarm), style: .cancel)
     }
     
     // MARK: - Actions
@@ -63,7 +63,7 @@ class CreateAlarmController<ViewModel: CreateAlarmProtocol>: UIViewController {
     }
     
     @objc private func didCancelToCreateAlarm() {
-        
+        delegate?.returnNavigation()
     }
 }
 
