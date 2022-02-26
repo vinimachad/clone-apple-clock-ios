@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 protocol AlarmProtocol: AlarmViewModelProtocol {
     func getAlarms()
 }
@@ -18,7 +16,9 @@ class AlarmViewModel {
     // MARK: - Public properties
     
     // MARK: - Private properties
+    
     private var getAlarmsUseCase: GetAlarmsUseCaseProtocol
+    
     // MARK: - Init
     
     init(getAlarmsUseCase: GetAlarmsUseCaseProtocol) {

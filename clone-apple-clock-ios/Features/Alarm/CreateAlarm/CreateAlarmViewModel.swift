@@ -8,7 +8,6 @@
 import Foundation
 
 protocol CreateAlarmProtocol: CreateAlarmViewModelProtocol {
-    var onStartToSaveAlarm: (() -> Void)? { get set }
     var onSuccessToSaveAlarm: (() -> Void)? { get set }
     var onFailureToSaveAlarm: ((String) -> Void)? { get set }
     func didSaveAlarm()
@@ -70,8 +69,7 @@ extension CreateAlarmViewModel: CreateAlarmProtocol {
     
     // MARK: - Requests
     
-    func createAlarm() {
-        onStartToSaveAlarm?()
+    private func createAlarm() {
         let newAlarm = AlarmCoreData(context: persist.context)
         newAlarm.time = alarm.time
         newAlarm.repeat = alarm.repeat.rawValue

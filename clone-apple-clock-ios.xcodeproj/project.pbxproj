@@ -13,6 +13,14 @@
 		3C2B3FEC27BC784100B50E9B /* RightDetailCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B3FEB27BC784100B50E9B /* RightDetailCellViewModel.swift */; };
 		3C2B41C427B206DD0064F0E4 /* ContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B41C327B206DD0064F0E4 /* ContainerFactory.swift */; };
 		3C2B41C827B2104A0064F0E4 /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2B41C727B2104A0064F0E4 /* Empty.xib */; };
+		3C2D525827C9A878007015CE /* CreateAlarmUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2D525727C9A878007015CE /* CreateAlarmUseCaseMock.swift */; };
+		3C2D525B27C9AFE2007015CE /* RightDetailCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2D525A27C9AFE2007015CE /* RightDetailCellSnapshotTests.swift */; };
+		3C2D525D27C9B011007015CE /* RightDetailCellViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2D525C27C9B011007015CE /* RightDetailCellViewModelMock.swift */; };
+		3C2D525F27C9B114007015CE /* RightDetailCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2D525E27C9B114007015CE /* RightDetailCellViewModelTests.swift */; };
+		3C2D526127C9B1E6007015CE /* AlarmCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2D526027C9B1E6007015CE /* AlarmCoordinatorTests.swift */; };
+		3C2D526627C9B50A007015CE /* TableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2D526527C9B50A007015CE /* TableViewDataSourceTests.swift */; };
+		3C2D526D27C9BEF2007015CE /* ContainerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2D526C27C9BEF2007015CE /* ContainerFactoryTests.swift */; };
+		3C2D526F27C9BFEC007015CE /* AlarmFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2D526E27C9BFEC007015CE /* AlarmFactoryTests.swift */; };
 		3C38C1FE27C85C970047CD05 /* Repeat.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C38C1FD27C85C970047CD05 /* Repeat.strings */; };
 		3C38C20127C868B10047CD05 /* GetAlarmsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C38C20027C868B10047CD05 /* GetAlarmsUseCase.swift */; };
 		3C4AC05A27B5F1A700B371E4 /* TabBarViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AC05927B5F1A700B371E4 /* TabBarViewSnapshotTests.swift */; };
@@ -58,7 +66,18 @@
 		3CBD452F27C15344002E9053 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD452E27C15344002E9053 /* Provider.swift */; };
 		3CBD453227C159EB002E9053 /* CreateAlarmUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD453127C159EB002E9053 /* CreateAlarmUseCase.swift */; };
 		3CD6629527C97FF700F626A2 /* AlarmObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6629427C97FF700F626A2 /* AlarmObserver.swift */; };
-		3CD6629727C9821E00F626A2 /* AlarmPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6629627C9821E00F626A2 /* AlarmPublisher.swift */; };
+		3CD6629727C9821E00F626A2 /* PostAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6629627C9821E00F626A2 /* PostAlarm.swift */; };
+		3CD6629E27C986FB00F626A2 /* AlarmViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6629D27C986FB00F626A2 /* AlarmViewSnapshotTests.swift */; };
+		3CD662A027C9870500F626A2 /* AlarmControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6629F27C9870500F626A2 /* AlarmControllerTests.swift */; };
+		3CD662A227C9870C00F626A2 /* AlarmViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662A127C9870C00F626A2 /* AlarmViewModelTests.swift */; };
+		3CD662A427C9871E00F626A2 /* GetAlarmsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662A327C9871E00F626A2 /* GetAlarmsUseCaseTests.swift */; };
+		3CD662A727C987E900F626A2 /* AlarmViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662A627C987E900F626A2 /* AlarmViewModelMock.swift */; };
+		3CD662A927C98A3500F626A2 /* AlarmControllerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662A827C98A3500F626A2 /* AlarmControllerDelegateMock.swift */; };
+		3CD662AB27C98B3900F626A2 /* GetAlarmsUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662AA27C98B3900F626A2 /* GetAlarmsUseCaseMock.swift */; };
+		3CD662B027C98F9400F626A2 /* CreateAlarmControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662AF27C98F9400F626A2 /* CreateAlarmControllerTests.swift */; };
+		3CD662B227C98FA400F626A2 /* CreateAlarmViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662B127C98FA400F626A2 /* CreateAlarmViewModelTests.swift */; };
+		3CD662B427C98FC000F626A2 /* CreateAlarmViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662B327C98FC000F626A2 /* CreateAlarmViewModelMock.swift */; };
+		3CD662B627C992CA00F626A2 /* CreateAlarmControllerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662B527C992CA00F626A2 /* CreateAlarmControllerDelegateMock.swift */; };
 		3CD8947827B3322A00C3A66D /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD8947727B3322A00C3A66D /* Tab.swift */; };
 		3CD8947C27B3329100C3A66D /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD8947B27B3329100C3A66D /* Localizable.swift */; };
 		3CD8947E27B332C300C3A66D /* TabBar.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CD8947D27B332C300C3A66D /* TabBar.strings */; };
@@ -96,6 +115,14 @@
 		3C2B3FEB27BC784100B50E9B /* RightDetailCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightDetailCellViewModel.swift; sourceTree = "<group>"; };
 		3C2B41C327B206DD0064F0E4 /* ContainerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerFactory.swift; sourceTree = "<group>"; };
 		3C2B41C727B2104A0064F0E4 /* Empty.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
+		3C2D525727C9A878007015CE /* CreateAlarmUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmUseCaseMock.swift; sourceTree = "<group>"; };
+		3C2D525A27C9AFE2007015CE /* RightDetailCellSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightDetailCellSnapshotTests.swift; sourceTree = "<group>"; };
+		3C2D525C27C9B011007015CE /* RightDetailCellViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightDetailCellViewModelMock.swift; sourceTree = "<group>"; };
+		3C2D525E27C9B114007015CE /* RightDetailCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightDetailCellViewModelTests.swift; sourceTree = "<group>"; };
+		3C2D526027C9B1E6007015CE /* AlarmCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCoordinatorTests.swift; sourceTree = "<group>"; };
+		3C2D526527C9B50A007015CE /* TableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceTests.swift; sourceTree = "<group>"; };
+		3C2D526C27C9BEF2007015CE /* ContainerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerFactoryTests.swift; sourceTree = "<group>"; };
+		3C2D526E27C9BFEC007015CE /* AlarmFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmFactoryTests.swift; sourceTree = "<group>"; };
 		3C38C1FD27C85C970047CD05 /* Repeat.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Repeat.strings; sourceTree = "<group>"; };
 		3C38C20027C868B10047CD05 /* GetAlarmsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlarmsUseCase.swift; sourceTree = "<group>"; };
 		3C4AC05927B5F1A700B371E4 /* TabBarViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewSnapshotTests.swift; sourceTree = "<group>"; };
@@ -144,7 +171,18 @@
 		3CBD452E27C15344002E9053 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		3CBD453127C159EB002E9053 /* CreateAlarmUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmUseCase.swift; sourceTree = "<group>"; };
 		3CD6629427C97FF700F626A2 /* AlarmObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmObserver.swift; sourceTree = "<group>"; };
-		3CD6629627C9821E00F626A2 /* AlarmPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPublisher.swift; sourceTree = "<group>"; };
+		3CD6629627C9821E00F626A2 /* PostAlarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAlarm.swift; sourceTree = "<group>"; };
+		3CD6629D27C986FB00F626A2 /* AlarmViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewSnapshotTests.swift; sourceTree = "<group>"; };
+		3CD6629F27C9870500F626A2 /* AlarmControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmControllerTests.swift; sourceTree = "<group>"; };
+		3CD662A127C9870C00F626A2 /* AlarmViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewModelTests.swift; sourceTree = "<group>"; };
+		3CD662A327C9871E00F626A2 /* GetAlarmsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlarmsUseCaseTests.swift; sourceTree = "<group>"; };
+		3CD662A627C987E900F626A2 /* AlarmViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewModelMock.swift; sourceTree = "<group>"; };
+		3CD662A827C98A3500F626A2 /* AlarmControllerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmControllerDelegateMock.swift; sourceTree = "<group>"; };
+		3CD662AA27C98B3900F626A2 /* GetAlarmsUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlarmsUseCaseMock.swift; sourceTree = "<group>"; };
+		3CD662AF27C98F9400F626A2 /* CreateAlarmControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmControllerTests.swift; sourceTree = "<group>"; };
+		3CD662B127C98FA400F626A2 /* CreateAlarmViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmViewModelTests.swift; sourceTree = "<group>"; };
+		3CD662B327C98FC000F626A2 /* CreateAlarmViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmViewModelMock.swift; sourceTree = "<group>"; };
+		3CD662B527C992CA00F626A2 /* CreateAlarmControllerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmControllerDelegateMock.swift; sourceTree = "<group>"; };
 		3CD8947727B3322A00C3A66D /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		3CD8947B27B3329100C3A66D /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		3CD8947D27B332C300C3A66D /* TabBar.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TabBar.strings; sourceTree = "<group>"; };
@@ -226,6 +264,48 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
+		3C2D525927C9AFCE007015CE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3C2D525A27C9AFE2007015CE /* RightDetailCellSnapshotTests.swift */,
+				3C2D525E27C9B114007015CE /* RightDetailCellViewModelTests.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3C2D526227C9B41F007015CE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3C2D526327C9B423007015CE /* DataSource */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3C2D526327C9B423007015CE /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				3C2D526427C9B447007015CE /* TableView */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		3C2D526427C9B447007015CE /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				3C2D526527C9B50A007015CE /* TableViewDataSourceTests.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		3C2D526B27C9BEE2007015CE /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				3C2D526C27C9BEF2007015CE /* ContainerFactoryTests.swift */,
+				3C2D526E27C9BFEC007015CE /* AlarmFactoryTests.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
 		3C38C1FF27C868A00047CD05 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +317,8 @@
 		3C4AC04F27B5F01200B371E4 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				3C2D526B27C9BEE2007015CE /* Factories */,
+				3C2D526227C9B41F007015CE /* UI */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -244,6 +326,7 @@
 		3C4AC05027B5F01C00B371E4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				3CD6629827C986B900F626A2 /* Alarm */,
 				3C4AC05227B5F03400B371E4 /* TabBar */,
 			);
 			path = Features;
@@ -254,6 +337,7 @@
 			children = (
 				3C1D707527B7086900F7F463 /* Setup */,
 				3C1D707827B70F4C00F7F463 /* ContainerCoordinatorTests.swift */,
+				3C2D526027C9B1E6007015CE /* AlarmCoordinatorTests.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -516,9 +600,70 @@
 			isa = PBXGroup;
 			children = (
 				3CD6629427C97FF700F626A2 /* AlarmObserver.swift */,
-				3CD6629627C9821E00F626A2 /* AlarmPublisher.swift */,
+				3CD6629627C9821E00F626A2 /* PostAlarm.swift */,
 			);
 			path = Alarm;
+			sourceTree = "<group>";
+		};
+		3CD6629827C986B900F626A2 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				3CD6629B27C986E100F626A2 /* Alarm */,
+				3CD6629927C986C500F626A2 /* CreateAlarm */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		3CD6629927C986C500F626A2 /* CreateAlarm */ = {
+			isa = PBXGroup;
+			children = (
+				3C2D525927C9AFCE007015CE /* Cells */,
+				3CD662AC27C98F6900F626A2 /* Mocks */,
+				3CD662AF27C98F9400F626A2 /* CreateAlarmControllerTests.swift */,
+				3CD662B127C98FA400F626A2 /* CreateAlarmViewModelTests.swift */,
+			);
+			path = CreateAlarm;
+			sourceTree = "<group>";
+		};
+		3CD6629B27C986E100F626A2 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				3CD662A527C987DD00F626A2 /* Mocks */,
+				3CD6629C27C986E900F626A2 /* Domain */,
+				3CD6629D27C986FB00F626A2 /* AlarmViewSnapshotTests.swift */,
+				3CD6629F27C9870500F626A2 /* AlarmControllerTests.swift */,
+				3CD662A127C9870C00F626A2 /* AlarmViewModelTests.swift */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		3CD6629C27C986E900F626A2 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3CD662A327C9871E00F626A2 /* GetAlarmsUseCaseTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3CD662A527C987DD00F626A2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3CD662A627C987E900F626A2 /* AlarmViewModelMock.swift */,
+				3CD662A827C98A3500F626A2 /* AlarmControllerDelegateMock.swift */,
+				3CD662AA27C98B3900F626A2 /* GetAlarmsUseCaseMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		3CD662AC27C98F6900F626A2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3CD662B327C98FC000F626A2 /* CreateAlarmViewModelMock.swift */,
+				3CD662B527C992CA00F626A2 /* CreateAlarmControllerDelegateMock.swift */,
+				3C2D525727C9A878007015CE /* CreateAlarmUseCaseMock.swift */,
+				3C2D525C27C9B011007015CE /* RightDetailCellViewModelMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		3CD8947627B3321E00C3A66D /* Models */ = {
@@ -875,7 +1020,7 @@
 			files = (
 				3CD8947C27B3329100C3A66D /* Localizable.swift in Sources */,
 				3CD6629527C97FF700F626A2 /* AlarmObserver.swift in Sources */,
-				3CD6629727C9821E00F626A2 /* AlarmPublisher.swift in Sources */,
+				3CD6629727C9821E00F626A2 /* PostAlarm.swift in Sources */,
 				3CD8948227B3337200C3A66D /* Images.swift in Sources */,
 				3C613F2E27B9D6AA00A42C58 /* CreateAlarmCoordinator.swift in Sources */,
 				3C613F1E27B9A7F700A42C58 /* TableSection.swift in Sources */,
@@ -922,12 +1067,31 @@
 			files = (
 				3C4AC06827B5F87000B371E4 /* TabBarViewModelTests.swift in Sources */,
 				3C4AC06627B5F64E00B371E4 /* TabBarControllerDelegateMock.swift in Sources */,
+				3C2D525F27C9B114007015CE /* RightDetailCellViewModelTests.swift in Sources */,
+				3CD662B427C98FC000F626A2 /* CreateAlarmViewModelMock.swift in Sources */,
+				3CD662B227C98FA400F626A2 /* CreateAlarmViewModelTests.swift in Sources */,
+				3CD662A927C98A3500F626A2 /* AlarmControllerDelegateMock.swift in Sources */,
+				3CD662A727C987E900F626A2 /* AlarmViewModelMock.swift in Sources */,
+				3C2D525D27C9B011007015CE /* RightDetailCellViewModelMock.swift in Sources */,
+				3CD662A427C9871E00F626A2 /* GetAlarmsUseCaseTests.swift in Sources */,
+				3C2D526F27C9BFEC007015CE /* AlarmFactoryTests.swift in Sources */,
+				3CD662A227C9870C00F626A2 /* AlarmViewModelTests.swift in Sources */,
+				3C2D526127C9B1E6007015CE /* AlarmCoordinatorTests.swift in Sources */,
+				3CD6629E27C986FB00F626A2 /* AlarmViewSnapshotTests.swift in Sources */,
+				3CD662B027C98F9400F626A2 /* CreateAlarmControllerTests.swift in Sources */,
 				3C4AC05F27B5F38100B371E4 /* TabBarViewModelMock.swift in Sources */,
 				3C4AC06427B5F5FB00B371E4 /* TabBarControllerTests.swift in Sources */,
+				3CD662B627C992CA00F626A2 /* CreateAlarmControllerDelegateMock.swift in Sources */,
+				3CD662A027C9870500F626A2 /* AlarmControllerTests.swift in Sources */,
 				3C1D707927B70F4C00F7F463 /* ContainerCoordinatorTests.swift in Sources */,
 				3C4AC05A27B5F1A700B371E4 /* TabBarViewSnapshotTests.swift in Sources */,
+				3CD662AB27C98B3900F626A2 /* GetAlarmsUseCaseMock.swift in Sources */,
+				3C2D526D27C9BEF2007015CE /* ContainerFactoryTests.swift in Sources */,
+				3C2D526627C9B50A007015CE /* TableViewDataSourceTests.swift in Sources */,
 				3C4AC06227B5F44C00B371E4 /* Spy.swift in Sources */,
 				3C1D707727B7087900F7F463 /* AppCoordinatorTests.swift in Sources */,
+				3C2D525827C9A878007015CE /* CreateAlarmUseCaseMock.swift in Sources */,
+				3C2D525B27C9AFE2007015CE /* RightDetailCellSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

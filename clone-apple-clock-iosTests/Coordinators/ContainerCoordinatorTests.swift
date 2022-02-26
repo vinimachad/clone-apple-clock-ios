@@ -18,6 +18,7 @@ class ContainerCoordinatorTests: XCTestCase {
     }
     
     func test_getControllerByTab_whenReceiveAlarmWithType_expectPassAlarmCoordinatorToChildCoordinator() {
-        
+        _ = sut.getControllerByTab(.alarm)
+        XCTAssertTrue(sut.childCoordinator is AlarmCoordinator)
     }
 }

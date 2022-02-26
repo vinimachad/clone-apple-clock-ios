@@ -35,7 +35,7 @@ class AlarmCoordinator: CoordinatorProtocol {
 
 extension AlarmCoordinator: AlarmControllerDelegate {
     
-    func pushCreateAlarm() {
+    func presentCreateAlarm() {
         let coordinator = CreateAlarmCoordinator()
         coordinator.childDelegate = childDelegate
         childCoordinator = coordinator

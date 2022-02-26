@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol AlarmControllerDelegate: AnyObject {
-    func pushCreateAlarm()
+    func presentCreateAlarm()
 }
 
 class AlarmController<ViewModel: AlarmProtocol>: UIViewController, AlarmObserver {
@@ -62,7 +62,7 @@ class AlarmController<ViewModel: AlarmProtocol>: UIViewController, AlarmObserver
     // MARK: - Actions
     
     @objc private func didTapAddAlarm() {
-        delegate?.pushCreateAlarm()
+        delegate?.presentCreateAlarm()
     }
     
     @objc private func updateAlarm() {

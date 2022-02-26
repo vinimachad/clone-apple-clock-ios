@@ -39,6 +39,7 @@ class AlarmView: UIView {
     // MARK: - Bind
     
     func bindIn(viewModel: AlarmViewModelProtocol) {
+        tableViewDataSource.sections = []
         self.viewModel = viewModel
     }
 }
@@ -53,7 +54,7 @@ extension AlarmView {
     }
     
     private func setupTableView() {
-        
+        tableViewDataSource.tableView = tableView
     }
 }
 
