@@ -52,4 +52,12 @@ class TableViewDataSource: NSObject, UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         sections[indexPath.section].didSelect(at: indexPath.row)
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        sections[indexPath.section].editingCellIsEnable
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        sections[indexPath.section].didEditing(at: indexPath.row)
+    }
 }

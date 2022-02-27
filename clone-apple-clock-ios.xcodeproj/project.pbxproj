@@ -60,6 +60,9 @@
 		3C6F5F2527BF0528005DFE7C /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F5F2427BF0528005DFE7C /* Sound.swift */; };
 		3C6F5F2B27BF30FD005DFE7C /* ClockModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F5F2927BF30FD005DFE7C /* ClockModel.xcdatamodeld */; };
 		3C7B1B1A27B20177008116E4 /* Pods_clone_apple_clock_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91BCDCC249C87CCE1A8E1FEF /* Pods_clone_apple_clock_ios.framework */; };
+		3C8136BA27CC03C000F39720 /* DeleteAlarmUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8136B927CC03C000F39720 /* DeleteAlarmUseCase.swift */; };
+		3C87235427CA6E7000E47150 /* AlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C87235327CA6E7000E47150 /* AlarmCell.swift */; };
+		3C87235627CA6E7800E47150 /* AlarmCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C87235527CA6E7800E47150 /* AlarmCellViewModel.swift */; };
 		3CBD452427C14AF0002E9053 /* AlarmCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD452327C14AF0002E9053 /* AlarmCoreData.swift */; };
 		3CBD452727C14BB7002E9053 /* PersistContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD452627C14BB7002E9053 /* PersistContainer.swift */; };
 		3CBD452C27C15156002E9053 /* AlarmRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD452B27C15156002E9053 /* AlarmRoutes.swift */; };
@@ -165,6 +168,9 @@
 		3C6F5F2227BF0308005DFE7C /* Repeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repeat.swift; sourceTree = "<group>"; };
 		3C6F5F2427BF0528005DFE7C /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		3C6F5F2A27BF30FD005DFE7C /* ExampleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleModel.xcdatamodel; sourceTree = "<group>"; };
+		3C8136B927CC03C000F39720 /* DeleteAlarmUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlarmUseCase.swift; sourceTree = "<group>"; };
+		3C87235327CA6E7000E47150 /* AlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCell.swift; sourceTree = "<group>"; };
+		3C87235527CA6E7800E47150 /* AlarmCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCellViewModel.swift; sourceTree = "<group>"; };
 		3CBD452327C14AF0002E9053 /* AlarmCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCoreData.swift; sourceTree = "<group>"; };
 		3CBD452627C14BB7002E9053 /* PersistContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistContainer.swift; sourceTree = "<group>"; };
 		3CBD452B27C15156002E9053 /* AlarmRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRoutes.swift; sourceTree = "<group>"; };
@@ -310,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				3C38C20027C868B10047CD05 /* GetAlarmsUseCase.swift */,
+				3C8136B927CC03C000F39720 /* DeleteAlarmUseCase.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -538,6 +545,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		3C87235227CA6E5F00E47150 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3C87235327CA6E7000E47150 /* AlarmCell.swift */,
+				3C87235527CA6E7800E47150 /* AlarmCellViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3CBD451227C149B1002E9053 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -724,6 +740,7 @@
 		3CF2F89127B95CE4003FC0EA /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				3C87235227CA6E5F00E47150 /* Cells */,
 				3C38C1FF27C868A00047CD05 /* Domain */,
 				3CF2F89227B95CEE003FC0EA /* AlarmView.swift */,
 				3CF2F89427B95CF6003FC0EA /* AlarmController.swift */,
@@ -1024,13 +1041,16 @@
 				3CD8948227B3337200C3A66D /* Images.swift in Sources */,
 				3C613F2E27B9D6AA00A42C58 /* CreateAlarmCoordinator.swift in Sources */,
 				3C613F1E27B9A7F700A42C58 /* TableSection.swift in Sources */,
+				3C87235627CA6E7800E47150 /* AlarmCellViewModel.swift in Sources */,
 				3CBD452F27C15344002E9053 /* Provider.swift in Sources */,
+				3C87235427CA6E7000E47150 /* AlarmCell.swift in Sources */,
 				3C613F1927B9970200A42C58 /* TableViewDataSource.swift in Sources */,
 				3C613F2827B9D56400A42C58 /* CreateAlarmView.swift in Sources */,
 				3C65E52927B0773000E79E8C /* TabBarViewModel.swift in Sources */,
 				3C38C20127C868B10047CD05 /* GetAlarmsUseCase.swift in Sources */,
 				3C613F2A27B9D56E00A42C58 /* CreateAlarmController.swift in Sources */,
 				3CBD453227C159EB002E9053 /* CreateAlarmUseCase.swift in Sources */,
+				3C8136BA27CC03C000F39720 /* DeleteAlarmUseCase.swift in Sources */,
 				3C6F5F2527BF0528005DFE7C /* Sound.swift in Sources */,
 				3C65E51E27B0736D00E79E8C /* AppCoordinator.swift in Sources */,
 				3C613F1C27B999BA00A42C58 /* TableSectionProtocols.swift in Sources */,

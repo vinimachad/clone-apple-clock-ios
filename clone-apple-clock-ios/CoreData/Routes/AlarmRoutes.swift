@@ -11,6 +11,7 @@ import CoreData
 protocol AlarmRoutesProtocol {
     func createAlarm(completion: ((Result<Void, Error>) -> Void)?)
     func getAlarms<T: NSManagedObject>(name: String, completion: ((Result<[T], Error>) -> Void)?)
+    func deleteAlarm<T: NSManagedObject>(objc: T, completion: ((Result<Void, Error>) -> Void)?)
 }
 
 class AlarmRoutes: AlarmRoutesProtocol {
@@ -27,5 +28,9 @@ class AlarmRoutes: AlarmRoutesProtocol {
     
     func getAlarms<T: NSManagedObject>(name: String, completion: ((Result<[T], Error>) -> Void)?) {
         provider.getEntityProperties(name: name, completion: completion)
+    }
+    
+    func deleteAlarm<T: NSManagedObject>(objc: T, completion: ((Result<Void, Error>) -> Void)?) {
+        provider.deleteProperty(objc: objc, completion: completion)
     }
 }

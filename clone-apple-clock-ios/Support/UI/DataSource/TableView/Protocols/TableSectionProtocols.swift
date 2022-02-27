@@ -12,12 +12,15 @@ import Reusable
 protocol TableSectionProtocol {
     var itemsCount: Int { get }
     var cellType: UITableViewCell.Type { get }
+    var editingCellIsEnable: Bool { get }
     func bindCell(cell: UITableViewCell, at row: Int)
     func didSelect(at: Int)
+    func didEditing(at: Int)
 }
 
 extension TableSectionProtocol {
     func didSelect(at: Int) { }
+    func didEditing(at: Int) { }
 }
 
 protocol CellProtocol {
@@ -25,8 +28,6 @@ protocol CellProtocol {
     func bindIn(viewModel: ViewModel)
 }
 
-protocol CellViewModelProtocol {}
+protocol CellViewModelProtocol { }
 
-extension UITableViewCell: Reusable {
-
-}
+extension UITableViewCell: Reusable { }

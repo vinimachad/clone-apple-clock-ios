@@ -76,5 +76,17 @@ extension AlarmController {
     
     private func bind() {
         contentView.bindIn(viewModel: viewModel)
+        
+        viewModel.onFailureGetAlarms = { [weak self] error in
+            print(error)
+        }
+        
+        viewModel.onFailureToDeleteAlarm = { [weak self] error in
+            print(error)
+        }
+        
+        viewModel.onSuccessToDeleteAlarm = { [weak self] in
+            self?.viewModel.getAlarms()
+        }
     }
 }

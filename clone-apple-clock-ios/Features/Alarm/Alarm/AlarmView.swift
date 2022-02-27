@@ -11,7 +11,10 @@ import UIKit
 import SnapKit
 
 
-protocol AlarmViewModelProtocol {}
+protocol AlarmViewModelProtocol {
+    var onUpdateViewModels: (([AlarmCellViewModelProtocol]) -> Void)? { get set }
+    func didEditingCell(at: Int)
+}
 
 class AlarmView: UIView {
     
@@ -39,8 +42,12 @@ class AlarmView: UIView {
     // MARK: - Bind
     
     func bindIn(viewModel: AlarmViewModelProtocol) {
-        tableViewDataSource.sections = []
         self.viewModel = viewModel
+        
+        self.viewModel?.onUpdateViewModels = { [weak self] viewModels in
+            let section = TableSection<AlarmCell>(viewModels: viewModels, editingIsEnable: true, delegate: self)
+            self?.tableViewDataSource.sections = [section]
+        }
     }
 }
 
@@ -72,5 +79,14 @@ extension AlarmView {
     
     private func viewHierarchy() {
         addSubview(tableView)
+    }
+}
+
+// MARK: - TableSectionDelegate
+
+extension AlarmView: TableSectionDelegate {
+    
+    func didEditing(at: Int) {
+        viewModel?.didEditingCell(at: at)
     }
 }

@@ -64,7 +64,7 @@ extension CreateAlarmViewModel: CreateAlarmProtocol {
     }
     
     func didChangeAlarmValue(_ time: String) {
-        alarm.time = time.toDate()
+        alarm.time = time.toDate(format: Date.defaultTimeFormat)
     }
     
     // MARK: - Requests

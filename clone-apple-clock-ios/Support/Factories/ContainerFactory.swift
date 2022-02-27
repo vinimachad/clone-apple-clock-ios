@@ -17,8 +17,10 @@ enum ContainerFactory {
     }
     
     static func alarm(delegate: AlarmControllerDelegate?) -> UIViewController {
-        let getAlarmsUseCase = GetAlarmsUseCase(api: AlarmRoutes())
-        let vm = AlarmViewModel(getAlarmsUseCase: getAlarmsUseCase)
+        let route = AlarmRoutes()
+        let getAlarmsUseCase = GetAlarmsUseCase(api: route)
+        let deleteAlarmUseCase = DeleteAlarmUseCase(api: route)
+        let vm = AlarmViewModel(getAlarmsUseCase: getAlarmsUseCase, deleteAlarmUseCase: deleteAlarmUseCase)
         return AlarmController(viewModel: vm, delegate: delegate)
     }
 }

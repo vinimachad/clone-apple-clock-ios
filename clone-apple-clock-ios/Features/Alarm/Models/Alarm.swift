@@ -10,7 +10,7 @@ import Foundation
 struct Alarm {
     var time: Date?
     var `repeat`: Repeat = .never
-    var label: String = ""
+    var label: String = "Alarm"
     var sound: Sound = .radar
     var snooze: Bool = false
 }
