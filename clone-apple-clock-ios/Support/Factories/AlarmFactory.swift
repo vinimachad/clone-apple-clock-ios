@@ -15,4 +15,9 @@ enum AlarmFactory {
         let vm = CreateAlarmViewModel(persist: PersistContainer.shared, createAlarmUseCase: createAlarmUseCase)
         return CreateAlarmController(viewModel: vm, delegate: delegate)
     }
+    
+    static func repeatAlarm() -> UIViewController {
+        let viewModel = RepeatAlarmViewModel()
+        return RepeatAlarmController(viewModel: viewModel)
+    }
 }

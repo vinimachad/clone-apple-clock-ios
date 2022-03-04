@@ -18,8 +18,9 @@ extension UIViewController {
     func defaultNavigationBar(_ title: String? = nil) {
         self.title = title
         navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.tintColor = .orange
         navigationController?.navigationBar.backgroundColor = .clear
+        setDefaultBackButton()
     }
     
     func hiddenNavigationBar(_ isHidden: Bool = true) {
@@ -39,5 +40,9 @@ extension UIViewController {
         case .left: navigationController?.navigationBar.topItem?.leftBarButtonItem = button
         case .right: navigationController?.navigationBar.topItem?.rightBarButtonItem = button
         }
+    }
+    
+    func setDefaultBackButton() {
+        navigationController?.navigationBar.topItem?.backButtonTitle = "Voltar"
     }
 }

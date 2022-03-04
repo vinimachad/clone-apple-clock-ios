@@ -41,4 +41,9 @@ class CreateAlarmCoordinator: CoordinatorProtocol {
 
 extension CreateAlarmCoordinator: CreateAlarmControllerDelegate {
     
+    func pushRepeatAlarm() {
+        let vc = AlarmFactory.repeatAlarm()
+        vc.navigationController?.modalPresentationStyle = .pageSheet
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

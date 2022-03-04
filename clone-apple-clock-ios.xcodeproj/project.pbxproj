@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1366AC27D1A52500C6FE95 /* RepeatAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1366AB27D1A52500C6FE95 /* RepeatAlarmView.swift */; };
+		3C1366AE27D1A52D00C6FE95 /* RepeatAlarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1366AD27D1A52D00C6FE95 /* RepeatAlarmViewModel.swift */; };
+		3C1366B027D1A53A00C6FE95 /* RepeatAlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1366AF27D1A53A00C6FE95 /* RepeatAlarmController.swift */; };
+		3C1366B727D1A90C00C6FE95 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1366B627D1A90C00C6FE95 /* TitleCell.swift */; };
+		3C1366B927D1A91900C6FE95 /* TitleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1366B827D1A91900C6FE95 /* TitleCellViewModel.swift */; };
 		3C1D707727B7087900F7F463 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D707627B7087900F7F463 /* AppCoordinatorTests.swift */; };
 		3C1D707927B70F4C00F7F463 /* ContainerCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D707827B70F4C00F7F463 /* ContainerCoordinatorTests.swift */; };
 		3C2B3FEA27BC740C00B50E9B /* RightDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B3FE927BC740C00B50E9B /* RightDetailCell.swift */; };
@@ -115,6 +120,11 @@
 /* Begin PBXFileReference section */
 		078DDCAC498FCA5F8B8129CB /* Pods_clone_apple_clock_ios_clone_apple_clock_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clone_apple_clock_ios_clone_apple_clock_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCF9984F0CF37D5C27ED81D /* Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests/Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3C1366AB27D1A52500C6FE95 /* RepeatAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatAlarmView.swift; sourceTree = "<group>"; };
+		3C1366AD27D1A52D00C6FE95 /* RepeatAlarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatAlarmViewModel.swift; sourceTree = "<group>"; };
+		3C1366AF27D1A53A00C6FE95 /* RepeatAlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatAlarmController.swift; sourceTree = "<group>"; };
+		3C1366B627D1A90C00C6FE95 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		3C1366B827D1A91900C6FE95 /* TitleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCellViewModel.swift; sourceTree = "<group>"; };
 		3C1D707627B7087900F7F463 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
 		3C1D707827B70F4C00F7F463 /* ContainerCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerCoordinatorTests.swift; sourceTree = "<group>"; };
 		3C2B3FE927BC740C00B50E9B /* RightDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightDetailCell.swift; sourceTree = "<group>"; };
@@ -239,6 +249,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C1366AA27D1A51700C6FE95 /* RepeatAlarm */ = {
+			isa = PBXGroup;
+			children = (
+				3C1366B527D1A90100C6FE95 /* Cells */,
+				3C1366AB27D1A52500C6FE95 /* RepeatAlarmView.swift */,
+				3C1366AD27D1A52D00C6FE95 /* RepeatAlarmViewModel.swift */,
+				3C1366AF27D1A53A00C6FE95 /* RepeatAlarmController.swift */,
+			);
+			path = RepeatAlarm;
+			sourceTree = "<group>";
+		};
+		3C1366B527D1A90100C6FE95 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3C1366B627D1A90C00C6FE95 /* TitleCell.swift */,
+				3C1366B827D1A91900C6FE95 /* TitleCellViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3C1D707527B7086900F7F463 /* Setup */ = {
 			isa = PBXGroup;
 			children = (
@@ -504,6 +534,7 @@
 		3C65E51A27B0733100E79E8C /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				3C1366AA27D1A51700C6FE95 /* RepeatAlarm */,
 				3CF2F89027B95CD9003FC0EA /* Alarm */,
 				3C65E52327B0770800E79E8C /* TabBar */,
 			);
@@ -1052,6 +1083,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1366B027D1A53A00C6FE95 /* RepeatAlarmController.swift in Sources */,
 				3CD8947C27B3329100C3A66D /* Localizable.swift in Sources */,
 				3CD6629527C97FF700F626A2 /* AlarmObserver.swift in Sources */,
 				3CD6629727C9821E00F626A2 /* PostAlarm.swift in Sources */,
@@ -1068,7 +1100,9 @@
 				3C613F2A27B9D56E00A42C58 /* CreateAlarmController.swift in Sources */,
 				3CBD453227C159EB002E9053 /* CreateAlarmUseCase.swift in Sources */,
 				3C8136BA27CC03C000F39720 /* DeleteAlarmUseCase.swift in Sources */,
+				3C1366B727D1A90C00C6FE95 /* TitleCell.swift in Sources */,
 				3C6F5F2527BF0528005DFE7C /* Sound.swift in Sources */,
+				3C1366AC27D1A52500C6FE95 /* RepeatAlarmView.swift in Sources */,
 				3C65E51E27B0736D00E79E8C /* AppCoordinator.swift in Sources */,
 				3C613F1C27B999BA00A42C58 /* TableSectionProtocols.swift in Sources */,
 				3C6F5F2327BF0308005DFE7C /* Repeat.swift in Sources */,
@@ -1080,7 +1114,9 @@
 				3CBD452727C14BB7002E9053 /* PersistContainer.swift in Sources */,
 				3CD8947827B3322A00C3A66D /* Tab.swift in Sources */,
 				3C2B3FEA27BC740C00B50E9B /* RightDetailCell.swift in Sources */,
+				3C1366AE27D1A52D00C6FE95 /* RepeatAlarmViewModel.swift in Sources */,
 				3CF2F89327B95CEE003FC0EA /* AlarmView.swift in Sources */,
+				3C1366B927D1A91900C6FE95 /* TitleCellViewModel.swift in Sources */,
 				3C65E52227B0741500E79E8C /* ContainerCoordinator.swift in Sources */,
 				3C2B41C427B206DD0064F0E4 /* ContainerFactory.swift in Sources */,
 				3C65E52027B0737400E79E8C /* CoordinatorProtocols.swift in Sources */,

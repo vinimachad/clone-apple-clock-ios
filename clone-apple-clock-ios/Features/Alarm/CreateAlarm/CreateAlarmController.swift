@@ -10,6 +10,7 @@ import UIKit
 
 protocol CreateAlarmControllerDelegate: AnyObject {
     func returnNavigation()
+    func pushRepeatAlarm()
 }
 
 class CreateAlarmController<ViewModel: CreateAlarmProtocol>: UIViewController, PostAlarm {
@@ -78,6 +79,14 @@ extension CreateAlarmController {
         viewModel.onSuccessToSaveAlarm = { [weak self] in
             self?.delegate?.returnNavigation()
             self?.postUpdateAlarm()
+        }
+        
+        viewModel.onSelectCell = { [weak self] kind in
+            switch kind {
+            case .repeat: self?.delegate?.pushRepeatAlarm()
+            case .label: ""//delegate?.
+            case .sound: ""//delegate?.
+            }
         }
     }
 }

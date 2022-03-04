@@ -10,6 +10,7 @@ import Foundation
 protocol CreateAlarmProtocol: CreateAlarmViewModelProtocol {
     var onSuccessToSaveAlarm: (() -> Void)? { get set }
     var onFailureToSaveAlarm: ((String) -> Void)? { get set }
+    var onSelectCell: ((CreateAlarmViewModel.Selections) -> Void)? { get set }
     func didSaveAlarm()
 }
 
@@ -26,6 +27,7 @@ class CreateAlarmViewModel {
     var onStartToSaveAlarm: (() -> Void)?
     var onSuccessToSaveAlarm: (() -> Void)?
     var onFailureToSaveAlarm: ((String) -> Void)?
+    var onSelectCell: ((Selections) -> Void)?
     
     lazy var sections: [TableSectionProtocol] = {
         [
@@ -38,6 +40,7 @@ class CreateAlarmViewModel {
     private var alarm: Alarm = Alarm()
     private var persist: PersistContainerProtocol
     private var createAlarmUseCase: CreateAlarmUseCaseProtocol
+    private var rightDetailCellViewModels: [RightDetailCellViewModelProtocol] = []
     
     // MARK: - Init
     
@@ -47,11 +50,16 @@ class CreateAlarmViewModel {
     }
     
     private func generateSelectsSection() -> TableSectionProtocol {
-        let viewModels = Selections.allCases.map {
-            RightDetailCellViewModel(title: $0.title, result: $0.result, onSelectCell: { })
+         rightDetailCellViewModels = Selections.allCases.map {
+            RightDetailCellViewModel(
+                selectionsKind: $0,
+                title: $0.title,
+                result: $0.result,
+                onSelectCell: self.didSelectCell(_:)
+            )
         }
         
-        return TableSection<RightDetailCell>(viewModels: viewModels)
+        return TableSection<RightDetailCell>(viewModels: rightDetailCellViewModels, delegate: self)
     }
 }
 
@@ -65,6 +73,10 @@ extension CreateAlarmViewModel: CreateAlarmProtocol {
     
     func didChangeAlarmValue(_ time: String) {
         alarm.time = time.toDate(format: Date.defaultTimeFormat)
+    }
+    
+    func didSelectCell(_ kind: Selections) {
+        onSelectCell?(kind)
     }
     
     // MARK: - Requests
@@ -85,6 +97,15 @@ extension CreateAlarmViewModel: CreateAlarmProtocol {
                 self?.onFailureToSaveAlarm?(error)
             }
         )
+    }
+}
+
+// MARK: - TableSectionDelegate
+
+extension CreateAlarmViewModel: TableSectionDelegate {
+    
+    func didSelect(at: Int) {
+        rightDetailCellViewModels[at].didSelectedCell()
     }
 }
 

@@ -13,19 +13,26 @@ class RightDetailCellViewModel {
     
     var title: String?
     var result: String?
-    var onSelectCell: (() -> Void)?
+    var selectionKind: CreateAlarmViewModel.Selections
+    var onSelectCell: ((CreateAlarmViewModel.Selections) -> Void)?
     
     // MARK: - Init
     
-    init(title: String?, result: String?, onSelectCell: (() -> Void)?) {
+    init(
+        selectionsKind: CreateAlarmViewModel.Selections,
+        title: String?, result: String?,
+        onSelectCell: ((CreateAlarmViewModel.Selections) -> Void)?
+    ) {
+        self.selectionKind = selectionsKind
         self.title = title
         self.result = result
         self.onSelectCell = onSelectCell
     }
-    
-    func didSelectedCell() {
-        onSelectCell?()
-    }
 }
 
-extension RightDetailCellViewModel: RightDetailCellViewModelProtocol {}
+extension RightDetailCellViewModel: RightDetailCellViewModelProtocol {
+    
+    func didSelectedCell() {
+        onSelectCell?(selectionKind)
+    }
+}

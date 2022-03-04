@@ -5,12 +5,12 @@
   Created by Vinicius Galhardo Machado on 24/02/22.
   
 */
-"never_label" = "nunca";
-"week_label" = "semana";
-"monday_label" = "segunda-feira";
-"tuesday_label" = "terça-feira";
-"wednesday_label" = "quarta-feira";
-"thursday_label" = "quinta-feira";
-"friday_label" = "sexta-feira";
-"saturday_label" = "sábado";
-"sunday_label" = "domingo";
+"never_label" = "Nunca";
+"week_label" = "Toda Semana";
+"monday_label" = "Toda Segunda-feira";
+"tuesday_label" = "Toda Terça-feira";
+"wednesday_label" = "Toda Quarta-feira";
+"thursday_label" = "Toda Quinta-feira";
+"friday_label" = "Toda Sexta-feira";
+"saturday_label" = "Todo Sábado";
+"sunday_label" = "Todo Domingo";

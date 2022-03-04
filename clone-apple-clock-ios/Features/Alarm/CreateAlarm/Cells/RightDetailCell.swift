@@ -12,7 +12,7 @@ import SnapKit
 protocol RightDetailCellViewModelProtocol: CellViewModelProtocol {
     var title: String? { get }
     var result: String? { get }
-    var onSelectCell: (() -> Void)? { get set }
+    var onSelectCell: ((CreateAlarmViewModel.Selections) -> Void)? { get set }
     func didSelectedCell()
 }
 
