@@ -1,0 +1,10 @@
+/* 
+  Default.strings
+  clone-apple-clock-ios
+
+  Created by Vinicius Galhardo Machado on 13/02/22.
+  
+*/
+
+"save_label" = "Salvar";
+"cancel_label" = "Cancelar";

@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - CoordinatorProtocol
 
-protocol CoordinatorProtocol: ChildCoordinatorDelegate {
+protocol CoordinatorProtocol: ChildCoordinatorDelegate, PresentableCoordinator {
     var childDelegate: ChildCoordinatorDelegate? { get set }
     var childCoordinator: CoordinatorProtocol? { get set }
     var containerViewController: UIViewController { get }

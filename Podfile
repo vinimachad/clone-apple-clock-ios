@@ -6,7 +6,7 @@ target 'clone-apple-clock-ios' do
   use_frameworks!
   
   pod 'SnapKit'
-  pod 'VTableViewDataSource', :git => 'https://github.com/vinimachad/TableViewDataSource', :tag => '0.0.2'
+  pod 'VTableViewDataSource', :git => 'https://github.com/vinimachad/TableViewDataSource', :tag => '0.0.3'
 
   target 'clone-apple-clock-iosTests' do
     inherit! :search_paths

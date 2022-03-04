@@ -7,8 +7,11 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class ContainerCoordinator: CoordinatorProtocol {
+    
+    // MARK: - Public properties
     
     var childDelegate: ChildCoordinatorDelegate?
     var childCoordinator: CoordinatorProtocol?
@@ -17,7 +20,15 @@ class ContainerCoordinator: CoordinatorProtocol {
         navigationController
     }
     
+    // MARK: - Private properties
+    
     private var navigationController = UINavigationController()
+
+    // MARK: - Lazy coordinators
+    
+    private lazy var alarmCoordinator: AlarmCoordinator = AlarmCoordinator()
+
+    // MARK: - Start
     
     func start() -> UIViewController {
         let vc = ContainerFactory.container(delegate: self)
@@ -36,9 +47,8 @@ extension ContainerCoordinator: TabBarControllerDelegate {
             cv.view.backgroundColor = .green
             return cv
         case .alarm:
-            let cv = UIViewController()
-            cv.view.backgroundColor = .yellow
-            return cv
+            childCoordinator = alarmCoordinator
+            return alarmCoordinator.start()
         case .stopWatch:
             let cv = UIViewController()
             cv.view.backgroundColor = .blue

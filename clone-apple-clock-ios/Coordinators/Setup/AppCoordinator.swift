@@ -7,11 +7,16 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class AppCoordinator {
     
+    // MARK: - Private properties
+    
     private let window: UIWindow
     private(set) var childCoordinator: CoordinatorProtocol?
+    
+    // MARK: - Init
     
     init(window: UIWindow) {
         self.window = window

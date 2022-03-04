@@ -1,0 +1,16 @@
+/* 
+  Repeat.strings
+  clone-apple-clock-ios
+
+  Created by Vinicius Galhardo Machado on 24/02/22.
+  
+*/
+"never_label" = "nunca";
+"week_label" = "semana";
+"monday_label" = "segunda-feira";
+"tuesday_label" = "terça-feira";
+"wednesday_label" = "quarta-feira";
+"thursday_label" = "quinta-feira";
+"friday_label" = "sexta-feira";
+"saturday_label" = "sábado";
+"sunday_label" = "domingo";

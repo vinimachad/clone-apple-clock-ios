@@ -9,8 +9,20 @@
 /* Begin PBXBuildFile section */
 		3C1D707727B7087900F7F463 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D707627B7087900F7F463 /* AppCoordinatorTests.swift */; };
 		3C1D707927B70F4C00F7F463 /* ContainerCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D707827B70F4C00F7F463 /* ContainerCoordinatorTests.swift */; };
+		3C2B3FEA27BC740C00B50E9B /* RightDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B3FE927BC740C00B50E9B /* RightDetailCell.swift */; };
+		3C2B3FEC27BC784100B50E9B /* RightDetailCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B3FEB27BC784100B50E9B /* RightDetailCellViewModel.swift */; };
 		3C2B41C427B206DD0064F0E4 /* ContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B41C327B206DD0064F0E4 /* ContainerFactory.swift */; };
 		3C2B41C827B2104A0064F0E4 /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2B41C727B2104A0064F0E4 /* Empty.xib */; };
+		3C2D525827C9A878007015CE /* CreateAlarmUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2D525727C9A878007015CE /* CreateAlarmUseCaseMock.swift */; };
+		3C2D525B27C9AFE2007015CE /* RightDetailCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2D525A27C9AFE2007015CE /* RightDetailCellSnapshotTests.swift */; };
+		3C2D525D27C9B011007015CE /* RightDetailCellViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2D525C27C9B011007015CE /* RightDetailCellViewModelMock.swift */; };
+		3C2D525F27C9B114007015CE /* RightDetailCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2D525E27C9B114007015CE /* RightDetailCellViewModelTests.swift */; };
+		3C2D526127C9B1E6007015CE /* AlarmCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2D526027C9B1E6007015CE /* AlarmCoordinatorTests.swift */; };
+		3C2D526627C9B50A007015CE /* TableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2D526527C9B50A007015CE /* TableViewDataSourceTests.swift */; };
+		3C2D526D27C9BEF2007015CE /* ContainerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2D526C27C9BEF2007015CE /* ContainerFactoryTests.swift */; };
+		3C2D526F27C9BFEC007015CE /* AlarmFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2D526E27C9BFEC007015CE /* AlarmFactoryTests.swift */; };
+		3C38C1FE27C85C970047CD05 /* Repeat.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C38C1FD27C85C970047CD05 /* Repeat.strings */; };
+		3C38C20127C868B10047CD05 /* GetAlarmsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C38C20027C868B10047CD05 /* GetAlarmsUseCase.swift */; };
 		3C4AC05A27B5F1A700B371E4 /* TabBarViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AC05927B5F1A700B371E4 /* TabBarViewSnapshotTests.swift */; };
 		3C4AC05C27B5F2BB00B371E4 /* Snapshots in Resources */ = {isa = PBXBuildFile; fileRef = 3C4AC05B27B5F2BB00B371E4 /* Snapshots */; };
 		3C4AC05F27B5F38100B371E4 /* TabBarViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AC05E27B5F38100B371E4 /* TabBarViewModelMock.swift */; };
@@ -18,6 +30,16 @@
 		3C4AC06427B5F5FB00B371E4 /* TabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AC06327B5F5FB00B371E4 /* TabBarControllerTests.swift */; };
 		3C4AC06627B5F64E00B371E4 /* TabBarControllerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AC06527B5F64E00B371E4 /* TabBarControllerDelegateMock.swift */; };
 		3C4AC06827B5F87000B371E4 /* TabBarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AC06727B5F87000B371E4 /* TabBarViewModelTests.swift */; };
+		3C613F1927B9970200A42C58 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C613F1827B9970200A42C58 /* TableViewDataSource.swift */; };
+		3C613F1C27B999BA00A42C58 /* TableSectionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C613F1B27B999BA00A42C58 /* TableSectionProtocols.swift */; };
+		3C613F1E27B9A7F700A42C58 /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C613F1D27B9A7F700A42C58 /* TableSection.swift */; };
+		3C613F2027B9B1CC00A42C58 /* AlarmCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C613F1F27B9B1CC00A42C58 /* AlarmCoordinator.swift */; };
+		3C613F2327B9CB1500A42C58 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C613F2227B9CB1500A42C58 /* Navigation.swift */; };
+		3C613F2527B9D50700A42C58 /* AlarmFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C613F2427B9D50700A42C58 /* AlarmFactory.swift */; };
+		3C613F2827B9D56400A42C58 /* CreateAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C613F2727B9D56400A42C58 /* CreateAlarmView.swift */; };
+		3C613F2A27B9D56E00A42C58 /* CreateAlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C613F2927B9D56E00A42C58 /* CreateAlarmController.swift */; };
+		3C613F2C27B9D57700A42C58 /* CreateAlarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C613F2B27B9D57700A42C58 /* CreateAlarmViewModel.swift */; };
+		3C613F2E27B9D6AA00A42C58 /* CreateAlarmCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C613F2D27B9D6AA00A42C58 /* CreateAlarmCoordinator.swift */; };
 		3C65E4EA27B072FE00E79E8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E4E927B072FE00E79E8C /* AppDelegate.swift */; };
 		3C65E4EC27B072FE00E79E8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E4EB27B072FE00E79E8C /* SceneDelegate.swift */; };
 		3C65E4F327B072FF00E79E8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C65E4F227B072FF00E79E8C /* Assets.xcassets */; };
@@ -30,11 +52,45 @@
 		3C65E52527B0771800E79E8C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E52427B0771800E79E8C /* TabBarView.swift */; };
 		3C65E52727B0772800E79E8C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E52627B0772800E79E8C /* TabBarController.swift */; };
 		3C65E52927B0773000E79E8C /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E52827B0773000E79E8C /* TabBarViewModel.swift */; };
+		3C6C8A5B27B9D95400214F50 /* Alarm.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C6C8A5A27B9D95400214F50 /* Alarm.strings */; };
+		3C6C8A5D27B9D9B300214F50 /* Default.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C6C8A5C27B9D9B300214F50 /* Default.strings */; };
+		3C6F5F1D27BEFC24005DFE7C /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F5F1C27BEFC24005DFE7C /* String+Date.swift */; };
+		3C6F5F2127BF02CC005DFE7C /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F5F2027BF02CC005DFE7C /* Alarm.swift */; };
+		3C6F5F2327BF0308005DFE7C /* Repeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F5F2227BF0308005DFE7C /* Repeat.swift */; };
+		3C6F5F2527BF0528005DFE7C /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F5F2427BF0528005DFE7C /* Sound.swift */; };
+		3C6F5F2B27BF30FD005DFE7C /* ClockModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F5F2927BF30FD005DFE7C /* ClockModel.xcdatamodeld */; };
 		3C7B1B1A27B20177008116E4 /* Pods_clone_apple_clock_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91BCDCC249C87CCE1A8E1FEF /* Pods_clone_apple_clock_ios.framework */; };
+		3C8136BA27CC03C000F39720 /* DeleteAlarmUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8136B927CC03C000F39720 /* DeleteAlarmUseCase.swift */; };
+		3C87235427CA6E7000E47150 /* AlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C87235327CA6E7000E47150 /* AlarmCell.swift */; };
+		3C87235627CA6E7800E47150 /* AlarmCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C87235527CA6E7800E47150 /* AlarmCellViewModel.swift */; };
+		3CBD452427C14AF0002E9053 /* AlarmCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD452327C14AF0002E9053 /* AlarmCoreData.swift */; };
+		3CBD452727C14BB7002E9053 /* PersistContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD452627C14BB7002E9053 /* PersistContainer.swift */; };
+		3CBD452C27C15156002E9053 /* AlarmRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD452B27C15156002E9053 /* AlarmRoutes.swift */; };
+		3CBD452F27C15344002E9053 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD452E27C15344002E9053 /* Provider.swift */; };
+		3CBD453227C159EB002E9053 /* CreateAlarmUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD453127C159EB002E9053 /* CreateAlarmUseCase.swift */; };
+		3CD6629527C97FF700F626A2 /* AlarmObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6629427C97FF700F626A2 /* AlarmObserver.swift */; };
+		3CD6629727C9821E00F626A2 /* PostAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6629627C9821E00F626A2 /* PostAlarm.swift */; };
+		3CD6629E27C986FB00F626A2 /* AlarmViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6629D27C986FB00F626A2 /* AlarmViewSnapshotTests.swift */; };
+		3CD662A027C9870500F626A2 /* AlarmControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6629F27C9870500F626A2 /* AlarmControllerTests.swift */; };
+		3CD662A227C9870C00F626A2 /* AlarmViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662A127C9870C00F626A2 /* AlarmViewModelTests.swift */; };
+		3CD662A427C9871E00F626A2 /* GetAlarmsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662A327C9871E00F626A2 /* GetAlarmsUseCaseTests.swift */; };
+		3CD662A727C987E900F626A2 /* AlarmViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662A627C987E900F626A2 /* AlarmViewModelMock.swift */; };
+		3CD662A927C98A3500F626A2 /* AlarmControllerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662A827C98A3500F626A2 /* AlarmControllerDelegateMock.swift */; };
+		3CD662AB27C98B3900F626A2 /* GetAlarmsUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662AA27C98B3900F626A2 /* GetAlarmsUseCaseMock.swift */; };
+		3CD662B027C98F9400F626A2 /* CreateAlarmControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662AF27C98F9400F626A2 /* CreateAlarmControllerTests.swift */; };
+		3CD662B227C98FA400F626A2 /* CreateAlarmViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662B127C98FA400F626A2 /* CreateAlarmViewModelTests.swift */; };
+		3CD662B427C98FC000F626A2 /* CreateAlarmViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662B327C98FC000F626A2 /* CreateAlarmViewModelMock.swift */; };
+		3CD662B627C992CA00F626A2 /* CreateAlarmControllerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD662B527C992CA00F626A2 /* CreateAlarmControllerDelegateMock.swift */; };
 		3CD8947827B3322A00C3A66D /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD8947727B3322A00C3A66D /* Tab.swift */; };
 		3CD8947C27B3329100C3A66D /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD8947B27B3329100C3A66D /* Localizable.swift */; };
 		3CD8947E27B332C300C3A66D /* TabBar.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CD8947D27B332C300C3A66D /* TabBar.strings */; };
 		3CD8948227B3337200C3A66D /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD8948127B3337200C3A66D /* Images.swift */; };
+		3CE5CDC927D043EA00DD8C7B /* DeleteAlarmUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE5CDC827D043EA00DD8C7B /* DeleteAlarmUseCaseMock.swift */; };
+		3CE5CDCC27D04B5300DD8C7B /* AlarmCellSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE5CDCB27D04B5300DD8C7B /* AlarmCellSnapshot.swift */; };
+		3CE5CDCE27D04B5D00DD8C7B /* AlarmCellViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE5CDCD27D04B5D00DD8C7B /* AlarmCellViewModelMock.swift */; };
+		3CF2F89327B95CEE003FC0EA /* AlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2F89227B95CEE003FC0EA /* AlarmView.swift */; };
+		3CF2F89527B95CF6003FC0EA /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2F89427B95CF6003FC0EA /* AlarmController.swift */; };
+		3CF2F89727B95CFF003FC0EA /* AlarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2F89627B95CFF003FC0EA /* AlarmViewModel.swift */; };
 		E94EFCDCF9AF9556CE83CB7E /* Pods_clone_apple_clock_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB64E77A9167B530EF4A071F /* Pods_clone_apple_clock_iosTests.framework */; };
 		F56BDC3949CAC6AD382E4C95 /* Pods_clone_apple_clock_ios_clone_apple_clock_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078DDCAC498FCA5F8B8129CB /* Pods_clone_apple_clock_ios_clone_apple_clock_iosUITests.framework */; };
 /* End PBXBuildFile section */
@@ -61,8 +117,20 @@
 		2CCF9984F0CF37D5C27ED81D /* Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests/Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3C1D707627B7087900F7F463 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
 		3C1D707827B70F4C00F7F463 /* ContainerCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerCoordinatorTests.swift; sourceTree = "<group>"; };
+		3C2B3FE927BC740C00B50E9B /* RightDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightDetailCell.swift; sourceTree = "<group>"; };
+		3C2B3FEB27BC784100B50E9B /* RightDetailCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightDetailCellViewModel.swift; sourceTree = "<group>"; };
 		3C2B41C327B206DD0064F0E4 /* ContainerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerFactory.swift; sourceTree = "<group>"; };
 		3C2B41C727B2104A0064F0E4 /* Empty.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
+		3C2D525727C9A878007015CE /* CreateAlarmUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmUseCaseMock.swift; sourceTree = "<group>"; };
+		3C2D525A27C9AFE2007015CE /* RightDetailCellSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightDetailCellSnapshotTests.swift; sourceTree = "<group>"; };
+		3C2D525C27C9B011007015CE /* RightDetailCellViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightDetailCellViewModelMock.swift; sourceTree = "<group>"; };
+		3C2D525E27C9B114007015CE /* RightDetailCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightDetailCellViewModelTests.swift; sourceTree = "<group>"; };
+		3C2D526027C9B1E6007015CE /* AlarmCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCoordinatorTests.swift; sourceTree = "<group>"; };
+		3C2D526527C9B50A007015CE /* TableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceTests.swift; sourceTree = "<group>"; };
+		3C2D526C27C9BEF2007015CE /* ContainerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerFactoryTests.swift; sourceTree = "<group>"; };
+		3C2D526E27C9BFEC007015CE /* AlarmFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmFactoryTests.swift; sourceTree = "<group>"; };
+		3C38C1FD27C85C970047CD05 /* Repeat.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Repeat.strings; sourceTree = "<group>"; };
+		3C38C20027C868B10047CD05 /* GetAlarmsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlarmsUseCase.swift; sourceTree = "<group>"; };
 		3C4AC05927B5F1A700B371E4 /* TabBarViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewSnapshotTests.swift; sourceTree = "<group>"; };
 		3C4AC05B27B5F2BB00B371E4 /* Snapshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Snapshots; sourceTree = "<group>"; };
 		3C4AC05E27B5F38100B371E4 /* TabBarViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModelMock.swift; sourceTree = "<group>"; };
@@ -70,6 +138,16 @@
 		3C4AC06327B5F5FB00B371E4 /* TabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerTests.swift; sourceTree = "<group>"; };
 		3C4AC06527B5F64E00B371E4 /* TabBarControllerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerDelegateMock.swift; sourceTree = "<group>"; };
 		3C4AC06727B5F87000B371E4 /* TabBarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModelTests.swift; sourceTree = "<group>"; };
+		3C613F1827B9970200A42C58 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		3C613F1B27B999BA00A42C58 /* TableSectionProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionProtocols.swift; sourceTree = "<group>"; };
+		3C613F1D27B9A7F700A42C58 /* TableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
+		3C613F1F27B9B1CC00A42C58 /* AlarmCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCoordinator.swift; sourceTree = "<group>"; };
+		3C613F2227B9CB1500A42C58 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		3C613F2427B9D50700A42C58 /* AlarmFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmFactory.swift; sourceTree = "<group>"; };
+		3C613F2727B9D56400A42C58 /* CreateAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmView.swift; sourceTree = "<group>"; };
+		3C613F2927B9D56E00A42C58 /* CreateAlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmController.swift; sourceTree = "<group>"; };
+		3C613F2B27B9D57700A42C58 /* CreateAlarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmViewModel.swift; sourceTree = "<group>"; };
+		3C613F2D27B9D6AA00A42C58 /* CreateAlarmCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmCoordinator.swift; sourceTree = "<group>"; };
 		3C65E4E627B072FE00E79E8C /* clone-apple-clock-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clone-apple-clock-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C65E4E927B072FE00E79E8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C65E4EB27B072FE00E79E8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,10 +164,44 @@
 		3C65E52427B0771800E79E8C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		3C65E52627B0772800E79E8C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3C65E52827B0773000E79E8C /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		3C6C8A5A27B9D95400214F50 /* Alarm.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Alarm.strings; sourceTree = "<group>"; };
+		3C6C8A5C27B9D9B300214F50 /* Default.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Default.strings; sourceTree = "<group>"; };
+		3C6F5F1C27BEFC24005DFE7C /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
+		3C6F5F2027BF02CC005DFE7C /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		3C6F5F2227BF0308005DFE7C /* Repeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repeat.swift; sourceTree = "<group>"; };
+		3C6F5F2427BF0528005DFE7C /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		3C6F5F2A27BF30FD005DFE7C /* ExampleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleModel.xcdatamodel; sourceTree = "<group>"; };
+		3C8136B927CC03C000F39720 /* DeleteAlarmUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlarmUseCase.swift; sourceTree = "<group>"; };
+		3C87235327CA6E7000E47150 /* AlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCell.swift; sourceTree = "<group>"; };
+		3C87235527CA6E7800E47150 /* AlarmCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCellViewModel.swift; sourceTree = "<group>"; };
+		3CBD452327C14AF0002E9053 /* AlarmCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCoreData.swift; sourceTree = "<group>"; };
+		3CBD452627C14BB7002E9053 /* PersistContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistContainer.swift; sourceTree = "<group>"; };
+		3CBD452B27C15156002E9053 /* AlarmRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRoutes.swift; sourceTree = "<group>"; };
+		3CBD452E27C15344002E9053 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		3CBD453127C159EB002E9053 /* CreateAlarmUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmUseCase.swift; sourceTree = "<group>"; };
+		3CD6629427C97FF700F626A2 /* AlarmObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmObserver.swift; sourceTree = "<group>"; };
+		3CD6629627C9821E00F626A2 /* PostAlarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAlarm.swift; sourceTree = "<group>"; };
+		3CD6629D27C986FB00F626A2 /* AlarmViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewSnapshotTests.swift; sourceTree = "<group>"; };
+		3CD6629F27C9870500F626A2 /* AlarmControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmControllerTests.swift; sourceTree = "<group>"; };
+		3CD662A127C9870C00F626A2 /* AlarmViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewModelTests.swift; sourceTree = "<group>"; };
+		3CD662A327C9871E00F626A2 /* GetAlarmsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlarmsUseCaseTests.swift; sourceTree = "<group>"; };
+		3CD662A627C987E900F626A2 /* AlarmViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewModelMock.swift; sourceTree = "<group>"; };
+		3CD662A827C98A3500F626A2 /* AlarmControllerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmControllerDelegateMock.swift; sourceTree = "<group>"; };
+		3CD662AA27C98B3900F626A2 /* GetAlarmsUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlarmsUseCaseMock.swift; sourceTree = "<group>"; };
+		3CD662AF27C98F9400F626A2 /* CreateAlarmControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmControllerTests.swift; sourceTree = "<group>"; };
+		3CD662B127C98FA400F626A2 /* CreateAlarmViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmViewModelTests.swift; sourceTree = "<group>"; };
+		3CD662B327C98FC000F626A2 /* CreateAlarmViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmViewModelMock.swift; sourceTree = "<group>"; };
+		3CD662B527C992CA00F626A2 /* CreateAlarmControllerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmControllerDelegateMock.swift; sourceTree = "<group>"; };
 		3CD8947727B3322A00C3A66D /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		3CD8947B27B3329100C3A66D /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		3CD8947D27B332C300C3A66D /* TabBar.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TabBar.strings; sourceTree = "<group>"; };
 		3CD8948127B3337200C3A66D /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		3CE5CDC827D043EA00DD8C7B /* DeleteAlarmUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlarmUseCaseMock.swift; sourceTree = "<group>"; };
+		3CE5CDCB27D04B5300DD8C7B /* AlarmCellSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCellSnapshot.swift; sourceTree = "<group>"; };
+		3CE5CDCD27D04B5D00DD8C7B /* AlarmCellViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCellViewModelMock.swift; sourceTree = "<group>"; };
+		3CF2F89227B95CEE003FC0EA /* AlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmView.swift; sourceTree = "<group>"; };
+		3CF2F89427B95CF6003FC0EA /* AlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
+		3CF2F89627B95CFF003FC0EA /* AlarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewModel.swift; sourceTree = "<group>"; };
 		49293348FD1A5F5B5825D480 /* Pods-clone-apple-clock-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clone-apple-clock-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-clone-apple-clock-iosTests/Pods-clone-apple-clock-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A849DCA6B47E9F0ABCE0BAE /* Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests/Pods-clone-apple-clock-ios-clone-apple-clock-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		783E52FACFE73F9FB5000F0A /* Pods-clone-apple-clock-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clone-apple-clock-iosTests.release.xcconfig"; path = "Target Support Files/Pods-clone-apple-clock-iosTests/Pods-clone-apple-clock-iosTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +247,15 @@
 			path = Setup;
 			sourceTree = "<group>";
 		};
+		3C2B3FE827BC73F700B50E9B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3C2B3FE927BC740C00B50E9B /* RightDetailCell.swift */,
+				3C2B3FEB27BC784100B50E9B /* RightDetailCellViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3C2B41C027B206B80064F0E4 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,13 +271,67 @@
 			isa = PBXGroup;
 			children = (
 				3C2B41C327B206DD0064F0E4 /* ContainerFactory.swift */,
+				3C613F2427B9D50700A42C58 /* AlarmFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		3C2D525927C9AFCE007015CE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3C2D525A27C9AFE2007015CE /* RightDetailCellSnapshotTests.swift */,
+				3C2D525E27C9B114007015CE /* RightDetailCellViewModelTests.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3C2D526227C9B41F007015CE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3C2D526327C9B423007015CE /* DataSource */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3C2D526327C9B423007015CE /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				3C2D526427C9B447007015CE /* TableView */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		3C2D526427C9B447007015CE /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				3C2D526527C9B50A007015CE /* TableViewDataSourceTests.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		3C2D526B27C9BEE2007015CE /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				3C2D526C27C9BEF2007015CE /* ContainerFactoryTests.swift */,
+				3C2D526E27C9BFEC007015CE /* AlarmFactoryTests.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		3C38C1FF27C868A00047CD05 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3C38C20027C868B10047CD05 /* GetAlarmsUseCase.swift */,
+				3C8136B927CC03C000F39720 /* DeleteAlarmUseCase.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		3C4AC04F27B5F01200B371E4 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				3C2D526B27C9BEE2007015CE /* Factories */,
+				3C2D526227C9B41F007015CE /* UI */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -164,6 +339,7 @@
 		3C4AC05027B5F01C00B371E4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				3CD6629827C986B900F626A2 /* Alarm */,
 				3C4AC05227B5F03400B371E4 /* TabBar */,
 			);
 			path = Features;
@@ -174,6 +350,7 @@
 			children = (
 				3C1D707527B7086900F7F463 /* Setup */,
 				3C1D707827B70F4C00F7F463 /* ContainerCoordinatorTests.swift */,
+				3C2D526027C9B1E6007015CE /* AlarmCoordinatorTests.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -206,9 +383,57 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		3C613F1627B996EA00A42C58 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				3C613F1727B996F200A42C58 /* TableView */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		3C613F1727B996F200A42C58 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				3C613F1A27B999AD00A42C58 /* Protocols */,
+				3C613F1827B9970200A42C58 /* TableViewDataSource.swift */,
+				3C613F1D27B9A7F700A42C58 /* TableSection.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		3C613F1A27B999AD00A42C58 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3C613F1B27B999BA00A42C58 /* TableSectionProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3C613F2127B9CB0C00A42C58 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3C613F2227B9CB1500A42C58 /* Navigation.swift */,
+				3C6F5F1C27BEFC24005DFE7C /* String+Date.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		3C613F2627B9D55500A42C58 /* CreateAlarm */ = {
+			isa = PBXGroup;
+			children = (
+				3CBD453027C159E1002E9053 /* Domain */,
+				3C2B3FE827BC73F700B50E9B /* Cells */,
+				3C613F2727B9D56400A42C58 /* CreateAlarmView.swift */,
+				3C613F2927B9D56E00A42C58 /* CreateAlarmController.swift */,
+				3C613F2B27B9D57700A42C58 /* CreateAlarmViewModel.swift */,
+			);
+			path = CreateAlarm;
+			sourceTree = "<group>";
+		};
 		3C65E4DD27B072FE00E79E8C = {
 			isa = PBXGroup;
 			children = (
+				3C6F5F2927BF30FD005DFE7C /* ClockModel.xcdatamodeld */,
 				3C65E4E827B072FE00E79E8C /* clone-apple-clock-ios */,
 				3C65E4FF27B072FF00E79E8C /* clone-apple-clock-iosTests */,
 				3C4AC05B27B5F2BB00B371E4 /* Snapshots */,
@@ -232,6 +457,7 @@
 		3C65E4E827B072FE00E79E8C /* clone-apple-clock-ios */ = {
 			isa = PBXGroup;
 			children = (
+				3CBD451227C149B1002E9053 /* CoreData */,
 				3C65E51B27B0733A00E79E8C /* Support */,
 				3C65E51A27B0733100E79E8C /* Features */,
 				3C65E51927B0732B00E79E8C /* Coordinators */,
@@ -269,6 +495,8 @@
 			children = (
 				3C65E51C27B0736500E79E8C /* Setup */,
 				3C65E52127B0741500E79E8C /* ContainerCoordinator.swift */,
+				3C613F1F27B9B1CC00A42C58 /* AlarmCoordinator.swift */,
+				3C613F2D27B9D6AA00A42C58 /* CreateAlarmCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -276,6 +504,7 @@
 		3C65E51A27B0733100E79E8C /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				3CF2F89027B95CD9003FC0EA /* Alarm */,
 				3C65E52327B0770800E79E8C /* TabBar */,
 			);
 			path = Features;
@@ -284,6 +513,9 @@
 		3C65E51B27B0733A00E79E8C /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				3CD6629227C97FCD00F626A2 /* NotificationCenter */,
+				3CBD452527C14BA6002E9053 /* Context */,
+				3C613F2127B9CB0C00A42C58 /* Extension */,
 				3CD8947F27B3336800C3A66D /* UI */,
 				3CD8947927B3328300C3A66D /* Strings */,
 				3C2B41C227B206CB0064F0E4 /* Factories */,
@@ -309,6 +541,155 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		3C6F5F1F27BF02C4005DFE7C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3C6F5F2027BF02CC005DFE7C /* Alarm.swift */,
+				3C6F5F2227BF0308005DFE7C /* Repeat.swift */,
+				3C6F5F2427BF0528005DFE7C /* Sound.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3C87235227CA6E5F00E47150 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3C87235327CA6E7000E47150 /* AlarmCell.swift */,
+				3C87235527CA6E7800E47150 /* AlarmCellViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3CBD451227C149B1002E9053 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3CBD452D27C15300002E9053 /* Setup */,
+				3CBD452A27C15145002E9053 /* Routes */,
+				3CBD452827C1512B002E9053 /* Entities */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		3CBD452527C14BA6002E9053 /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				3CBD452627C14BB7002E9053 /* PersistContainer.swift */,
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		3CBD452827C1512B002E9053 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3CBD452327C14AF0002E9053 /* AlarmCoreData.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3CBD452A27C15145002E9053 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				3CBD452B27C15156002E9053 /* AlarmRoutes.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		3CBD452D27C15300002E9053 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				3CBD452E27C15344002E9053 /* Provider.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		3CBD453027C159E1002E9053 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3CBD453127C159EB002E9053 /* CreateAlarmUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3CD6629227C97FCD00F626A2 /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				3CD6629327C97FE400F626A2 /* Alarm */,
+			);
+			path = NotificationCenter;
+			sourceTree = "<group>";
+		};
+		3CD6629327C97FE400F626A2 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				3CD6629427C97FF700F626A2 /* AlarmObserver.swift */,
+				3CD6629627C9821E00F626A2 /* PostAlarm.swift */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		3CD6629827C986B900F626A2 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				3CD6629B27C986E100F626A2 /* Alarm */,
+				3CD6629927C986C500F626A2 /* CreateAlarm */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		3CD6629927C986C500F626A2 /* CreateAlarm */ = {
+			isa = PBXGroup;
+			children = (
+				3C2D525927C9AFCE007015CE /* Cells */,
+				3CD662AC27C98F6900F626A2 /* Mocks */,
+				3CD662AF27C98F9400F626A2 /* CreateAlarmControllerTests.swift */,
+				3CD662B127C98FA400F626A2 /* CreateAlarmViewModelTests.swift */,
+			);
+			path = CreateAlarm;
+			sourceTree = "<group>";
+		};
+		3CD6629B27C986E100F626A2 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				3CE5CDCA27D04B4100DD8C7B /* Cells */,
+				3CD662A527C987DD00F626A2 /* Mocks */,
+				3CD6629C27C986E900F626A2 /* Domain */,
+				3CD6629D27C986FB00F626A2 /* AlarmViewSnapshotTests.swift */,
+				3CD6629F27C9870500F626A2 /* AlarmControllerTests.swift */,
+				3CD662A127C9870C00F626A2 /* AlarmViewModelTests.swift */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		3CD6629C27C986E900F626A2 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3CD662A327C9871E00F626A2 /* GetAlarmsUseCaseTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3CD662A527C987DD00F626A2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3CD662A627C987E900F626A2 /* AlarmViewModelMock.swift */,
+				3CD662A827C98A3500F626A2 /* AlarmControllerDelegateMock.swift */,
+				3CD662AA27C98B3900F626A2 /* GetAlarmsUseCaseMock.swift */,
+				3CE5CDC827D043EA00DD8C7B /* DeleteAlarmUseCaseMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		3CD662AC27C98F6900F626A2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3CD662B327C98FC000F626A2 /* CreateAlarmViewModelMock.swift */,
+				3CD662B527C992CA00F626A2 /* CreateAlarmControllerDelegateMock.swift */,
+				3C2D525727C9A878007015CE /* CreateAlarmUseCaseMock.swift */,
+				3C2D525C27C9B011007015CE /* RightDetailCellViewModelMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		3CD8947627B3321E00C3A66D /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +711,9 @@
 			isa = PBXGroup;
 			children = (
 				3CD8947D27B332C300C3A66D /* TabBar.strings */,
+				3C6C8A5A27B9D95400214F50 /* Alarm.strings */,
+				3C6C8A5C27B9D9B300214F50 /* Default.strings */,
+				3C38C1FD27C85C970047CD05 /* Repeat.strings */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -337,6 +721,7 @@
 		3CD8947F27B3336800C3A66D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3C613F1627B996EA00A42C58 /* DataSource */,
 				3CD8948027B3336A00C3A66D /* Tokens */,
 			);
 			path = UI;
@@ -348,6 +733,37 @@
 				3CD8948127B3337200C3A66D /* Images.swift */,
 			);
 			path = Tokens;
+			sourceTree = "<group>";
+		};
+		3CE5CDCA27D04B4100DD8C7B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3CE5CDCB27D04B5300DD8C7B /* AlarmCellSnapshot.swift */,
+				3CE5CDCD27D04B5D00DD8C7B /* AlarmCellViewModelMock.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3CF2F89027B95CD9003FC0EA /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				3C6F5F1F27BF02C4005DFE7C /* Models */,
+				3C613F2627B9D55500A42C58 /* CreateAlarm */,
+				3CF2F89127B95CE4003FC0EA /* Alarm */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		3CF2F89127B95CE4003FC0EA /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				3C87235227CA6E5F00E47150 /* Cells */,
+				3C38C1FF27C868A00047CD05 /* Domain */,
+				3CF2F89227B95CEE003FC0EA /* AlarmView.swift */,
+				3CF2F89427B95CF6003FC0EA /* AlarmController.swift */,
+				3CF2F89627B95CFF003FC0EA /* AlarmViewModel.swift */,
+			);
+			path = Alarm;
 			sourceTree = "<group>";
 		};
 		76EBC4943EF9323246D62F89 /* Frameworks */ = {
@@ -484,8 +900,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C38C1FE27C85C970047CD05 /* Repeat.strings in Resources */,
+				3C6C8A5D27B9D9B300214F50 /* Default.strings in Resources */,
 				3C2B41C827B2104A0064F0E4 /* Empty.xib in Resources */,
 				3C65E4F627B072FF00E79E8C /* LaunchScreen.storyboard in Resources */,
+				3C6C8A5B27B9D95400214F50 /* Alarm.strings in Resources */,
 				3CD8947E27B332C300C3A66D /* TabBar.strings in Resources */,
 				3C65E4F327B072FF00E79E8C /* Assets.xcassets in Resources */,
 			);
@@ -634,17 +1053,48 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CD8947C27B3329100C3A66D /* Localizable.swift in Sources */,
+				3CD6629527C97FF700F626A2 /* AlarmObserver.swift in Sources */,
+				3CD6629727C9821E00F626A2 /* PostAlarm.swift in Sources */,
 				3CD8948227B3337200C3A66D /* Images.swift in Sources */,
+				3C613F2E27B9D6AA00A42C58 /* CreateAlarmCoordinator.swift in Sources */,
+				3C613F1E27B9A7F700A42C58 /* TableSection.swift in Sources */,
+				3C87235627CA6E7800E47150 /* AlarmCellViewModel.swift in Sources */,
+				3CBD452F27C15344002E9053 /* Provider.swift in Sources */,
+				3C87235427CA6E7000E47150 /* AlarmCell.swift in Sources */,
+				3C613F1927B9970200A42C58 /* TableViewDataSource.swift in Sources */,
+				3C613F2827B9D56400A42C58 /* CreateAlarmView.swift in Sources */,
 				3C65E52927B0773000E79E8C /* TabBarViewModel.swift in Sources */,
+				3C38C20127C868B10047CD05 /* GetAlarmsUseCase.swift in Sources */,
+				3C613F2A27B9D56E00A42C58 /* CreateAlarmController.swift in Sources */,
+				3CBD453227C159EB002E9053 /* CreateAlarmUseCase.swift in Sources */,
+				3C8136BA27CC03C000F39720 /* DeleteAlarmUseCase.swift in Sources */,
+				3C6F5F2527BF0528005DFE7C /* Sound.swift in Sources */,
 				3C65E51E27B0736D00E79E8C /* AppCoordinator.swift in Sources */,
+				3C613F1C27B999BA00A42C58 /* TableSectionProtocols.swift in Sources */,
+				3C6F5F2327BF0308005DFE7C /* Repeat.swift in Sources */,
+				3C613F2327B9CB1500A42C58 /* Navigation.swift in Sources */,
+				3C613F2C27B9D57700A42C58 /* CreateAlarmViewModel.swift in Sources */,
+				3C6F5F2B27BF30FD005DFE7C /* ClockModel.xcdatamodeld in Sources */,
+				3CF2F89727B95CFF003FC0EA /* AlarmViewModel.swift in Sources */,
 				3C65E4EA27B072FE00E79E8C /* AppDelegate.swift in Sources */,
+				3CBD452727C14BB7002E9053 /* PersistContainer.swift in Sources */,
 				3CD8947827B3322A00C3A66D /* Tab.swift in Sources */,
+				3C2B3FEA27BC740C00B50E9B /* RightDetailCell.swift in Sources */,
+				3CF2F89327B95CEE003FC0EA /* AlarmView.swift in Sources */,
 				3C65E52227B0741500E79E8C /* ContainerCoordinator.swift in Sources */,
 				3C2B41C427B206DD0064F0E4 /* ContainerFactory.swift in Sources */,
 				3C65E52027B0737400E79E8C /* CoordinatorProtocols.swift in Sources */,
+				3CBD452427C14AF0002E9053 /* AlarmCoreData.swift in Sources */,
 				3C65E52727B0772800E79E8C /* TabBarController.swift in Sources */,
 				3C65E52527B0771800E79E8C /* TabBarView.swift in Sources */,
 				3C65E4EC27B072FE00E79E8C /* SceneDelegate.swift in Sources */,
+				3C6F5F1D27BEFC24005DFE7C /* String+Date.swift in Sources */,
+				3CBD452C27C15156002E9053 /* AlarmRoutes.swift in Sources */,
+				3C2B3FEC27BC784100B50E9B /* RightDetailCellViewModel.swift in Sources */,
+				3C613F2027B9B1CC00A42C58 /* AlarmCoordinator.swift in Sources */,
+				3CF2F89527B95CF6003FC0EA /* AlarmController.swift in Sources */,
+				3C6F5F2127BF02CC005DFE7C /* Alarm.swift in Sources */,
+				3C613F2527B9D50700A42C58 /* AlarmFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,12 +1104,34 @@
 			files = (
 				3C4AC06827B5F87000B371E4 /* TabBarViewModelTests.swift in Sources */,
 				3C4AC06627B5F64E00B371E4 /* TabBarControllerDelegateMock.swift in Sources */,
+				3C2D525F27C9B114007015CE /* RightDetailCellViewModelTests.swift in Sources */,
+				3CD662B427C98FC000F626A2 /* CreateAlarmViewModelMock.swift in Sources */,
+				3CD662B227C98FA400F626A2 /* CreateAlarmViewModelTests.swift in Sources */,
+				3CD662A927C98A3500F626A2 /* AlarmControllerDelegateMock.swift in Sources */,
+				3CD662A727C987E900F626A2 /* AlarmViewModelMock.swift in Sources */,
+				3C2D525D27C9B011007015CE /* RightDetailCellViewModelMock.swift in Sources */,
+				3CD662A427C9871E00F626A2 /* GetAlarmsUseCaseTests.swift in Sources */,
+				3C2D526F27C9BFEC007015CE /* AlarmFactoryTests.swift in Sources */,
+				3CD662A227C9870C00F626A2 /* AlarmViewModelTests.swift in Sources */,
+				3C2D526127C9B1E6007015CE /* AlarmCoordinatorTests.swift in Sources */,
+				3CD6629E27C986FB00F626A2 /* AlarmViewSnapshotTests.swift in Sources */,
+				3CD662B027C98F9400F626A2 /* CreateAlarmControllerTests.swift in Sources */,
+				3CE5CDCE27D04B5D00DD8C7B /* AlarmCellViewModelMock.swift in Sources */,
 				3C4AC05F27B5F38100B371E4 /* TabBarViewModelMock.swift in Sources */,
 				3C4AC06427B5F5FB00B371E4 /* TabBarControllerTests.swift in Sources */,
+				3CD662B627C992CA00F626A2 /* CreateAlarmControllerDelegateMock.swift in Sources */,
+				3CD662A027C9870500F626A2 /* AlarmControllerTests.swift in Sources */,
+				3CE5CDC927D043EA00DD8C7B /* DeleteAlarmUseCaseMock.swift in Sources */,
 				3C1D707927B70F4C00F7F463 /* ContainerCoordinatorTests.swift in Sources */,
 				3C4AC05A27B5F1A700B371E4 /* TabBarViewSnapshotTests.swift in Sources */,
+				3CD662AB27C98B3900F626A2 /* GetAlarmsUseCaseMock.swift in Sources */,
+				3C2D526D27C9BEF2007015CE /* ContainerFactoryTests.swift in Sources */,
+				3CE5CDCC27D04B5300DD8C7B /* AlarmCellSnapshot.swift in Sources */,
+				3C2D526627C9B50A007015CE /* TableViewDataSourceTests.swift in Sources */,
 				3C4AC06227B5F44C00B371E4 /* Spy.swift in Sources */,
 				3C1D707727B7087900F7F463 /* AppCoordinatorTests.swift in Sources */,
+				3C2D525827C9A878007015CE /* CreateAlarmUseCaseMock.swift in Sources */,
+				3C2D525B27C9AFE2007015CE /* RightDetailCellSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,6 +1302,7 @@
 				INFOPLIST_FILE = "clone-apple-clock-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -862,6 +1335,7 @@
 				INFOPLIST_FILE = "clone-apple-clock-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1014,6 +1488,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3C6F5F2927BF30FD005DFE7C /* ClockModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3C6F5F2A27BF30FD005DFE7C /* ExampleModel.xcdatamodel */,
+			);
+			currentVersion = 3C6F5F2A27BF30FD005DFE7C /* ExampleModel.xcdatamodel */;
+			path = ClockModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3C65E4DE27B072FE00E79E8C /* Project object */;
 }

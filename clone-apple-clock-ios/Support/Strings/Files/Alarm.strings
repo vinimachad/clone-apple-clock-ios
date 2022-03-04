@@ -1,0 +1,13 @@
+/* 
+  Alarm.strings
+  clone-apple-clock-ios
+
+  Created by Vinicius Galhardo Machado on 13/02/22.
+  
+*/
+
+"add_alarm_label" = "Adicionar alarme";
+"repeat_label" = "Repetir";
+"title_label" = "Titulo";
+"sound_label" = "Som";
+"snooze_label" = "Soneca";
