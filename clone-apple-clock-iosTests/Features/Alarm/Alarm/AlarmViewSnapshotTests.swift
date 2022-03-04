@@ -25,7 +25,12 @@ class AlarmViewSnapshotTests: FBSnapshotTestCase {
     }
     
     func test_bind_whenAllValuesIsFilled_expectValidSnapshot() {
+        let viewModel = AlarmCellViewModelMock()
+        viewModel.time = "10:00"
+        viewModel.label = "Trabalho"
+        
         sut.bindIn(viewModel: viewModelMock)
+        viewModelMock.onUpdateViewModels?([viewModel])
         FBSnapshotVerifyView(sut)
     }
 }

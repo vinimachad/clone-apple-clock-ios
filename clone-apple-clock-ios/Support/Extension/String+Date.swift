@@ -16,6 +16,7 @@ extension Date {
     static var dayMonthFormat: String  = "dd/MM"
     static var monthYearFormat: String  = "MM/yy"
     static var dayTimeFormat: String = "dd/MM/yyyy, HH:mm"
+    static var fullFormat: String = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZZZ"
     
     func toString(format: String = Date.defaultDateFormat, timeZone: TimeZone = .current) -> String {
         let dateFormatter = DateFormatter()
@@ -28,7 +29,7 @@ extension Date {
 
 extension String {
     
-    func toDate(format: String = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZZZ") -> Date? {
+    func toDate(format: String = Date.defaultTimeFormat) -> Date? {
         let parseFormat = DateFormatter()
         parseFormat.timeZone = TimeZone.current
         parseFormat.locale = Locale.current

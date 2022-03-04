@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 import UIKit
 import Reusable
 
@@ -23,7 +22,7 @@ class AlarmCell: UITableViewCell, CellProtocol {
     
     private var timeLabel = UILabel()
     private var titleAlarmLabel = UILabel()
-    private var alarmIsEnableSwitch = UISwitch()
+    private(set) var alarmIsEnableSwitch = UISwitch()
     
     // MARK: - Private properties
     

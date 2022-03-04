@@ -11,6 +11,16 @@ import Foundation
 class AlarmViewModelMock: AlarmProtocol {
     
     @Spy var invokedGetAlarms: Void?
+    @Spy var invokedDidEditingCell: Void?
+    
+    var onSuccessToDeleteAlarm: (() -> Void)?
+    var onFailureToDeleteAlarm: ((String) -> Void)?
+    var onFailureGetAlarms: ((String) -> Void)?
+    var onUpdateViewModels: (([AlarmCellViewModelProtocol]) -> Void)?
+    
+    func didEditingCell(at: Int) {
+        invokedDidEditingCell = ()
+    }
     
     func getAlarms() {
         invokedGetAlarms = ()
