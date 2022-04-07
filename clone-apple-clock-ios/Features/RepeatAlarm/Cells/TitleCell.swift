@@ -11,6 +11,8 @@ import Reusable
 
 protocol TitleCellViewModelProtocol: CellViewModelProtocol {
     var title: String { get }
+    var onUpdateCellState: ((Bool) -> Void)? { get set }
+    func didSelectCell(at: Int)
 }
 
 class TitleCell: UITableViewCell, CellProtocol {
@@ -40,6 +42,10 @@ class TitleCell: UITableViewCell, CellProtocol {
     func bindIn(viewModel: TitleCellViewModelProtocol) {
         self.viewModel = viewModel
         titleLabel.text = viewModel.title
+        
+        self.viewModel?.onUpdateCellState = { [weak self] isSelected in
+            self?.accessoryType = isSelected ? .checkmark : .none
+        }
     }
 }
 
@@ -49,6 +55,7 @@ extension TitleCell {
     
     private func setup() {
         setupConstraints()
+        tintColor = .orange
     }
 }
 

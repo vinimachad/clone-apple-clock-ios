@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum `Repeat`: String {
+enum `Repeat`: String  {
     case never
     case weeak
     case monday

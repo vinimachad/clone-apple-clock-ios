@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RepeatAlarmProtocol: RepeatAlarmViewModelProtocol {
-    
+ func saveDaysInRepeat()
 }
 
 class RepeatAlarmViewModel {
@@ -21,7 +21,9 @@ class RepeatAlarmViewModel {
     
     // MARK: - Private properties
     
-    private var `repeat`: [Repeat] {
+    private var titleCellViewModels: [TitleCellViewModelProtocol] = []
+    private var daysInRepeat: [Repeat] = []
+    private var listOfRepeat: [Repeat] {
         [
             .monday,
             .tuesday,
@@ -42,8 +44,21 @@ class RepeatAlarmViewModel {
     // MARK: - Sections
     
     private func generateRepeatCellsInSection() -> TableSectionProtocol {
-        let viewModels = `repeat`.map { TitleCellViewModel(title: "\($0.rawValue)_label".localize(.repeat))  }
-        return TableSection<TitleCell>(viewModels: viewModels)
+        titleCellViewModels = listOfRepeat.map {
+            TitleCellViewModel(
+                title: "\($0.rawValue)_label".localize(.repeat),
+                onSelectCell: self.didSelectedCell(_:at:)
+            )
+        }
+        return TableSection<TitleCell>(viewModels: titleCellViewModels, delegate: self)
+    }
+    
+    private func didSelectedCell(_ isSelected: Bool, at: Int) {
+        guard isSelected else {
+            daysInRepeat.removeAll(where: { $0 == listOfRepeat[at] })
+            return
+        }
+        daysInRepeat.append(listOfRepeat[at])
     }
 }
 
@@ -51,4 +66,16 @@ class RepeatAlarmViewModel {
 
 extension RepeatAlarmViewModel: RepeatAlarmProtocol {
     
+    func saveDaysInRepeat() {
+        
+    }
+}
+
+// MARK: - TableSectionDelegate
+
+extension RepeatAlarmViewModel: TableSectionDelegate {
+    
+    func didSelect(at: Int) {
+        titleCellViewModels[at].didSelectCell(at: at)
+    }
 }

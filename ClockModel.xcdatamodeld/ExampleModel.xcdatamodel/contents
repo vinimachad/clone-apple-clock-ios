@@ -6,8 +6,13 @@
         <attribute name="snooze" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="sound" optional="YES" attributeType="String"/>
         <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="repeat_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RepeatDays"/>
+    </entity>
+    <entity name="RepeatDays" representedClassName=".RepeatDays" syncable="YES">
+        <attribute name="daysInRepeat" optional="YES" attributeType="Transformable"/>
     </entity>
     <elements>
-        <element name="AlarmCoreData" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="AlarmCoreData" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="RepeatDays" positionX="-63" positionY="18" width="128" height="44"/>
     </elements>
 </model>

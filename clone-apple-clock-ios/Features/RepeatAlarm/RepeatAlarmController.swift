@@ -37,6 +37,11 @@ class RepeatAlarmController<ViewModel: RepeatAlarmProtocol>: UIViewController {
         view = contentView
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel.saveDaysInRepeat()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()

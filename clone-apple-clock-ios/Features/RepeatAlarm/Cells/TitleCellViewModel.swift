@@ -7,6 +7,21 @@
 
 import Foundation
 
-struct TitleCellViewModel: TitleCellViewModelProtocol {
+class TitleCellViewModel: TitleCellViewModelProtocol {
+    
     var title: String
+    var isSelected: Bool = false
+    var onSelectCell: ((Bool, Int) -> Void)?
+    var onUpdateCellState: ((Bool) -> Void)?
+    
+    init(title: String, onSelectCell: ((Bool, Int) -> Void)?) {
+        self.title = title
+        self.onSelectCell = onSelectCell
+    }
+    
+    func didSelectCell(at: Int) {
+        self.isSelected = !isSelected
+        onSelectCell?(isSelected, at)
+        onUpdateCellState?(isSelected)
+    }
 }
